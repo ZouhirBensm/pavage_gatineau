@@ -1,3 +1,6 @@
+// XML viewer
+// https://countwordsfree.com/xmlviewer
+
 function createSiteMap(urls, protocoled_domain) {
 
   // protocoled_domain = 'https://pavagegatineau.com'
