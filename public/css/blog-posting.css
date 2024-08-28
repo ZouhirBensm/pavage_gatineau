@@ -21,10 +21,19 @@ div#bar1 {
   align-items: center;
 }
 
+div#bar1 > span {
+  margin-right: 10px;
+}
+
+div#bar1 > div {
+  margin-left: 10px;
+}
+
 div#dates {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  text-align: end;
 }
 
 

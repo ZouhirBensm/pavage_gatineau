@@ -130,7 +130,7 @@ h3 {
   background-size: cover; */
 
   background-image: url('../img/pav.jpg');
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-position: center;
   background-size: 100% auto;
 
