@@ -11,7 +11,7 @@ async function mid1(req, res, next) {
 
   const { title } = req.params;
 
-  console.log("\n\n title: \n", title)
+  // console.log("\n\n title: \n", title)
 
 
   const blog_element_fr = await db.blog_element_fr.findOne({
@@ -71,7 +71,7 @@ async function mid1(req, res, next) {
 
 
 
-  console.log(res.locals.blog_element)
+  // console.log(res.locals.blog_element)
 
 
 

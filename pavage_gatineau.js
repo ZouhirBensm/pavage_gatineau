@@ -91,6 +91,11 @@ app.use((req, res, next) => {
   res.locals.protocoled_domain = `https://${res.locals.domain}`
 
 
+
+  const now = new Date()
+  console.log("* now -> ", now)
+
+
   return next()
 });
 
