@@ -1,7 +1,13 @@
+console.log("business_data ->", business_data.email)
+
 function sendEmail(event) {
   event.preventDefault(); // Prevent the form from submitting normally
 
-  const site_rentee_email = 'pavagegatineau@outlook.com'
+
+
+  
+
+  const site_rentee_email = business_data.email;
 
   // Get form data
   var name = document.getElementById('contact_name').value;
