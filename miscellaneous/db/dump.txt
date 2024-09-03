@@ -1113,7 +1113,7 @@ CREATE TABLE `review_data_en` (
 
 LOCK TABLES `review_data_en` WRITE;
 /*!40000 ALTER TABLE `review_data_en` DISABLE KEYS */;
-INSERT INTO `review_data_en` VALUES (1,'Jean-Pierre D.',5,'Excellent service from start to finish! The team paved our driveway in record time, while maintaining impeccable quality.'),(2,'Mélanie L.',5,'I called on this company to redo the asphalt in my driveway. Not only was the work done to perfection, but the team was also very professional and on time. The result is impeccable and the entrance has a superb new appearance. Thank you so much!'),(3,'Louis M.',5,'I am extremely satisfied with the work done on our concrete patio. The team was able to respect our budget while providing a result that exceeded our expectations. The finish is superb and the deadlines were perfectly respected. I will not hesitate to recommend them to those around me.');
+INSERT INTO `review_data_en` VALUES (1,'Stephen',5,'Pavage, Asphalte et Béton Gatineau did an amazing job on my driveway. The team was professional, punctual, and detail-oriented. The asphalt is high-quality, and the finish is perfect. They completed the job on time and within budget. I highly recommend them for any paving or concrete work!'),(2,'Benjamen HOLMES',5,'Pavage, Asphalte et Béton Gatineau exceeded my expectations with their outstanding work on my driveway. The team was both efficient and meticulous, ensuring a high-quality finish. They adhered to the timeline and budget, providing impeccable service throughout. I highly recommend them for any paving or concrete projects.'),(3,'Christina Connelly',4,'I think their work is amazing and I would highly recommend this business. Three Asphalt paving jobs that they do are great!');
 /*!40000 ALTER TABLE `review_data_en` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1139,7 +1139,7 @@ CREATE TABLE `review_data_fr` (
 
 LOCK TABLES `review_data_fr` WRITE;
 /*!40000 ALTER TABLE `review_data_fr` DISABLE KEYS */;
-INSERT INTO `review_data_fr` VALUES (1,'Jean-Pierre D.',5,'Excellent service du début à la fin! L\'équipe a pavé notre allée en un temps record, tout en maintenant une qualité irréprochable.'),(2,'Mélanie L.',5,'J\'ai fait appel à cette entreprise pour refaire l\'asphalte de mon entrée de garage. Non seulement le travail a été réalisé à la perfection, mais l\'équipe était également très professionnelle et respectueuse des délais. Le résultat est impeccable et l\'entrée a un superbe aspect neuf. Merci beaucoup!'),(3,'Louis M.',5,'Je suis extrêmement satisfait du travail effectué sur notre terrasse en béton. L\'équipe a su respecter notre budget tout en fournissant un résultat qui dépasse nos attentes. La finition est superbe et les délais ont été parfaitement respectés. Je n\'hésiterai pas à les recommander à mon entourage.');
+INSERT INTO `review_data_fr` VALUES (1,'Stephen',5,'Pavage, Asphalte et Béton Gatineau a fait un travail incroyable sur mon entrée. L\'équipe était professionnelle, ponctuelle et soucieuse du détail. L\'asphalte est de haute qualité et la finition est parfaite. Ils ont terminé le travail à temps et dans les limites du budget. Je les recommande fortement pour tous travaux de pavage ou de bétonnage!'),(2,'Benjamen HOLMES',5,'Pavage, Asphalte et Béton Gatineau a dépassé mes attentes avec leur travail exceptionnel sur mon entrée. L\'équipe était à la fois efficace et minutieuse, assurant une finition de haute qualité. Ils ont respecté l\'échéancier et le budget, offrant un service impeccable tout au long du projet. Je les recommande fortement pour tout projet de pavage ou de béton.'),(3,'Christina Connelly',4,'Je pense que leur travail est incroyable et je recommande vivement cette entreprise. Les trois travaux de pavage d\'asphalte qu\'ils font sont excellents !');
 /*!40000 ALTER TABLE `review_data_fr` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1212,4 +1212,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-09-02  9:59:08
+-- Dump completed on 2024-09-03 18:35:34
