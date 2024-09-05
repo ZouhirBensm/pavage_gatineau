@@ -280,7 +280,7 @@ app.get(['/blog', '/blog/en'], middleware4.mid1, middleware4_en.mid1, middleware
 
 app.get(['/blog/:category', '/blog/:category/en'], middleware4.mid1, middleware4_en.mid1, middleware7.mid1, middleware7_en.mid1, async (req, res, next) => {
 
-  console.log("\n\n(*)->\n\n", res.locals.index_page_data)
+  // console.log("\n\n(*)->\n\n", res.locals.index_page_data)
 
   // return res.end()
   return res.render('categorie', { ...res.locals.index_page_data });
@@ -339,7 +339,7 @@ app.get(['/tiroir1/mention-legale', '/drawer1/legal-notice/en'], middleware4.mid
 
   const legal_notice_page = legal_notice_page_fr || legal_notice_page_en
 
-  console.log(legal_notice_page)
+  // console.log(legal_notice_page)
 
 
   // return res.end()
@@ -410,7 +410,7 @@ app.get(['/tiroir1/politique-de-confidentialite', '/drawer1/privacy-policy/en'],
     }
   }
 
-  console.log(res.locals.index_page_data)
+  // console.log(res.locals.index_page_data)
 
   return res.render('politique-de-confidentialite', { ...res.locals.index_page_data });
 });
