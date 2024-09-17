@@ -48,7 +48,12 @@ async function mid1(req, res, next) {
   // Group blogs by category
   const categories_and_associated_blogs = blog_elements_en.reduce((acc, blog) => {
     const categoryName = blog.category.category_name;
-    const categorySlug = blog.category.slug;
+
+    // let categorySlugOri = blog.category.slug;
+    // let categorySlug = categorySlugOri.replace(/\/en$/, '');
+    
+    let categorySlug = blog.category.slug;
+    categorySlug = categorySlug.replace(/\/en$/, '');
 
     if (!acc[categoryName]) {
       acc[categoryName] = {
