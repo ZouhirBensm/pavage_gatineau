@@ -1,19 +1,23 @@
 /* Select the third occurrence of the matched div */
 section#tmPortfolio .tm-portfolio-item:nth-of-type(1) .tm-portfolio-name {
-  background-image: url('../img/travaux-en-beton-residentiel-et-commercial.webp');
+  background-image: url('../img/pave-uni.webp');
 }
+
+/* /img/travaux-en-beton-residentiel-et-commercial.webp */
+
+
 
 
 /* Select the third occurrence of the matched div */
 section#tmPortfolio .tm-portfolio-item:nth-of-type(2) .tm-portfolio-name {
-  background-image: url('../img/construction-de-marches-et-bordures-en-beton.webp');
+  background-image: url('../img/pave-uni2.webp');
 }
 
 
 
 /* Select the third occurrence of the matched div */
 section#tmPortfolio .tm-portfolio-item:nth-of-type(3) .tm-portfolio-name {
-  background-image: url('../img/preparation-et-mise-en-place-de-fondations-en-beton.webp');
+  background-image: url('../img/pave-uni3.webp');
 }
 
 

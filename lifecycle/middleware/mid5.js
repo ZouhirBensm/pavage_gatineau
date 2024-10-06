@@ -40,7 +40,7 @@ async function mid1(req, res, next) {
 
 
   if (!db_extra_service_page_fr) {
-    const error = new Error("No blog elements found!")
+    const error = new Error("No db_extra_service_page_fr found!")
     return next(error)
   }
 

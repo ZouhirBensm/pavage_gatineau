@@ -115,7 +115,18 @@ const middleware = require('./lifecycle/middleware/mid6_en');
 
 // For SEO Keep until google identifies that the pages are gone
 const goneUrls = [
-  "/some/url/path"
+  "/service/travaux-en-beton-residentiel-et-commercial-a-gatineau",
+  "/service/trottoirs-et-bordures-de-beton",
+  "/service/residential-and-commercial-concrete-works-in-gatineau/en",
+  "/service/concrete-sidewalks-and-curbs/en",
+  "/service/installation-de-certains-drains",
+  "/service/installation-of-certain-drains/en",
+  "/service/murets-et-murs-de-soutenement",
+  "/service/low-walls-and-retaining-walls/en",
+  "/service/location-de-camion-et-pepine-avec-operateur",
+  "/service/truck-and-truck-rental-with-operator/en",
+  "/service/location-de-fardiers",
+  "/service/rental-of-flatbeds/en",
 ];
 
 
@@ -225,13 +236,12 @@ app.get(['/service/revetement-maintenance-en-asphalte-gatineau', '/service/aspha
 });
 
 
+// /img/installation-de-pave-uni-residentiel-et-commercial.webp
+// /img/construction-de-marches-en-pave-uni.webp
+// /img/pose-de-pave-uni-residentiel.webp
 
 
-
-
-
-
-app.get(['/service/travaux-en-beton-residentiel-et-commercial-a-gatineau', '/service/residential-and-commercial-concrete-works-in-gatineau/en'], middleware4.mid1, middleware4_en.mid1, (req, res) => {
+app.get(['/service/pave-uni-gatineau', '/service/interlocking-paving-stones-pavers-gatineau/en'], middleware4.mid1, middleware4_en.mid1, (req, res) => {
 
   // return res.end()
   return res.render('travaux-en-beton-residentiel-et-commercial', { ...res.locals.index_page_data });
