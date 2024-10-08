@@ -612,7 +612,7 @@ CREATE TABLE `footer_en` (
 
 LOCK TABLES `footer_en` WRITE;
 /*!40000 ALTER TABLE `footer_en` DISABLE KEYS */;
-INSERT INTO `footer_en` VALUES (1,'Youtube logo SVG image','Twitter logo SVG image','Pinterest Logo SVG Image','Quora logo SVG image','SVG image of a letter','Site map','Blog','Legal notice','Privacy Policy','/plan-du-site','/blog/en','/drawer1/legal-notice','/drawer1/privacy-policy','Powered by:');
+INSERT INTO `footer_en` VALUES (1,'Youtube logo SVG image','Twitter logo SVG image','Pinterest Logo SVG Image','Quora logo SVG image','SVG image of a letter','Site map','Blog','Legal notice','Privacy Policy','/plan-du-site','/blog/en','/drawer1/legal-notice/en','/drawer1/privacy-policy/en','Powered by:');
 /*!40000 ALTER TABLE `footer_en` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1212,4 +1212,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-10-06 12:22:26
+-- Dump completed on 2024-10-08 10:43:38
