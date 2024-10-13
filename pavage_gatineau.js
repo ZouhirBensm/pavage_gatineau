@@ -127,6 +127,8 @@ const goneUrls = [
   "/service/truck-and-truck-rental-with-operator/en",
   "/service/location-de-fardiers",
   "/service/rental-of-flatbeds/en",
+  "/service/asphalt-maintenance-coating-gatineau/en",
+  "/service/revetement-maintenance-en-asphalte-gatineau"
 ];
 
 
@@ -228,7 +230,8 @@ app.get(['/service/pavage-residentiel-et-commercial-a-gatineau', '/service/resid
 
 
 
-app.get(['/service/revetement-maintenance-en-asphalte-gatineau', '/service/asphalt-maintenance-coating-gatineau/en'], middleware4.mid1, middleware4_en.mid1, (req, res) => {
+
+app.get(['/service/asphalte-gatineau-outaouais-residentiel-et-commercial', '/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en'], middleware4.mid1, middleware4_en.mid1, (req, res) => {
 
   // return res.end()
   return res.render('revetement-en-asphalte', { ...res.locals.index_page_data });
