@@ -454,6 +454,12 @@ app.get(['/tiroir1/politique-de-confidentialite', '/drawer1/privacy-policy/en'],
 
 
 app.get('/sitemap/sitemap-3', async (req, res, next) => {
+
+  // TODO needs testing
+  // res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  // res.setHeader('Pragma', 'no-cache');
+  // res.setHeader('Expires', '0');
+  
   // Define the path to the XML file
   const xmlFilePath = path.join(__dirname, 'public', 'sitemap', 'sitemap.xml');
 

@@ -3,37 +3,8 @@
   width: 44px;
 } */
 
-body>footer>div>div#social-media>a[href='https://x.com/PavageGatineau']>img {
-  height: 44px; 
-  width: 44px;
-}
 
-body>footer>div>div#social-media>a[href='https://www.pinterest.com/pavagegatineau/']>img {
-  height: 44px; 
-  width: 44px;
-}
-
-/* body>footer>div>div#social-media>a[href='#social4']>img {
-  height: 44px; 
-  width: 44px;
-} */
-
-body>footer>div>div#social-media>a[href='https://www.facebook.com/people/Pavage-Asphalte-et-B%25C3%25A9ton-Gatineau-Earnanswers/61564991373568/']>img {
-  height: 44px; 
-  width: 44px;
-}
-
-body>footer>div>div#social-media>a[href='https://www.linkedin.com/company/pavage-gatineau/']>img {
-  height: 44px; 
-  width: 44px;
-}
-
-body>footer>div>div#social-media>a[href='https://www.instagram.com/pavagegatineau/']>img {
-  height: 44px; 
-  width: 44px;
-}
-
-body>footer>div>div#social-media>a[href='mailto:pavagegatineau@outlook.com']>img {
+body>footer>div>div#social-media>a>img {
   height: 44px; 
   width: 44px;
 }
@@ -41,9 +12,9 @@ body>footer>div>div#social-media>a[href='mailto:pavagegatineau@outlook.com']>img
 
 
 
-/* body>footer>div>div#social-media>a[href='#social1']>img:hover {
-  content: url('../img/icons/youtube_orange.svg');
-} */
+
+
+
 
 body>footer>div>div#social-media>a[href='https://x.com/PavageGatineau']>img:hover {
   content: url('../img/icons/twitter_orange.svg');
@@ -52,10 +23,6 @@ body>footer>div>div#social-media>a[href='https://x.com/PavageGatineau']>img:hove
 body>footer>div>div#social-media>a[href='https://www.pinterest.com/pavagegatineau/']>img:hover {
   content: url('../img/icons/pinterest_orange.svg');
 }
-
-/* body>footer>div>div#social-media>a[href='#social4']>img:hover {
-  content: url('../img/icons/quora_orange.svg');
-} */
 
 body>footer>div>div#social-media>a[href='https://www.facebook.com/people/Pavage-Asphalte-et-B%25C3%25A9ton-Gatineau-Earnanswers/61564991373568/']>img:hover {
   content: url('../img/icons/facebook_orange.svg');
