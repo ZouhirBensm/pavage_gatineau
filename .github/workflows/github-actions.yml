@@ -24,13 +24,37 @@ jobs:
         port: ${{ secrets.SERVER_PORT }}
         script: |
           cd pavage_gatineau
+
+          # Remove old files and directories
           rm package-lock.json
           rm -r node_modules
           rm -r ./miscellaneous/db/dump.txt
+
+          # Ensure the correct permissions for models directory
           chmod -R 755 models
           rm -rf ./models/*
-          git pull https://${{ secrets.GITHUUB_USERNAME }}:${{ secrets.GITHUUB_PASSWORD }}@github.com/${{ secrets.GITHUUB_USERNAME }}/pavage_gatineau.git master
+
+          # Fetch the latest changes from GitHub and handle merge conflicts
+          git fetch origin master
+
+          # Try pulling, using theirs strategy to resolve conflicts in favor of the remote
+          git merge --strategy=recursive --strategy-option=theirs origin/master || echo "Merge failed, resolving manually"
+
+          # If merge conflicts still exist, we'll resolve them manually (we force their version of the merge)
+          git add .  # Stage the resolved files
+          git commit -m "Merge conflicts resolved (using 'theirs' strategy)" || echo "No conflicts to commit"
+
+          # Make sure we are always pulling the latest remote changes
+          git pull https://${{ secrets.GITHUUB_USERNAME }}:${{ secrets.GITHUUB_PASSWORD }}@github.com/${{ secrets.GITHUUB_USERNAME }}/pavage_gatineau.git master --strategy=recursive --strategy-option=theirs
+
+          # Install npm dependencies
           npm install
+
+          # Import database dump
           mysql -u ${{ secrets.DB_USERNAME }} -p${{ secrets.DB_USERPASSWORD }} ${{ secrets.DB_NAME }} < ./miscellaneous/db/dump.txt
+
+          # Generate models using sequelize-auto
           sequelize-auto -o \"./models\" -d ${{ secrets.DB_NAME }} -h ${{ secrets.DB_HOST }} -u ${{ secrets.DB_USERNAME }} -p ${{ secrets.DB_PORT }} -x ${{ secrets.DB_USERPASSWORD }} -e mysql
+
+          # Restart server using pm2
           pm2 restart pavage_gatineau
