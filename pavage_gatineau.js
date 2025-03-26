@@ -742,8 +742,8 @@ app.get('/sitemap/sitemap-3', async (req, res, next) => {
 
   // return res.render('sitemap');
   // return res.sendFile('sitemap.html', { root: 'public' });
-  // return res.redirect(301, '/');
-  return res.end()
+  return res.redirect(301, '/');
+  // return res.end()
 });
 
 

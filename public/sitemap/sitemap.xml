@@ -3,250 +3,220 @@
 <url>
 <loc>https://localhost:3004/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/en"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/demande-de-devis-gratuit</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/request-a-free-quote/en"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/organisation</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/organization/en"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/a-propos</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/about/en"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/service/pavage-residentiel-et-commercial-a-gatineau</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/residential-and-commercial-paving-in-gatineau/en"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/revetement-maintenance-en-asphalte-gatineau</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/asphalt-maintenance-coating-gatineau/en"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<loc>https://localhost:3004/service/asphalte-gatineau-outaouais-residentiel-et-commercial</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en"/>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/travaux-en-beton-residentiel-et-commercial-a-gatineau</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/residential-and-commercial-concrete-works-in-gatineau/en"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<loc>https://localhost:3004/service/pave-uni-gatineau</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/interlocking-paving-stones-pavers-gatineau/en"/>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/plan-du-site</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/sitemap/en"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/request-a-free-quote/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/demande-de-devis-gratuit"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/organization/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/organisation"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/about/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/a-propos"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/service/residential-and-commercial-paving-in-gatineau/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/pavage-residentiel-et-commercial-a-gatineau"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/asphalt-maintenance-coating-gatineau/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/revetement-maintenance-en-asphalte-gatineau"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<loc>https://localhost:3004/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en</loc>
+<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/asphalte-gatineau-outaouais-residentiel-et-commercial"/>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/residential-and-commercial-concrete-works-in-gatineau/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/travaux-en-beton-residentiel-et-commercial-a-gatineau"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
+<loc>https://localhost:3004/service/interlocking-paving-stones-pavers-gatineau/en</loc>
+<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/pave-uni-gatineau"/>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/sitemap/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/plan-du-site"/>
-<lastmod>2024-08-18T16:34:53.886Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/pave-uni-a-gatineau</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/plain-paving-stone-in-gatineau/en"/>
-<lastmod>2024-08-14T00:34:21.928Z</lastmod>
+<lastmod>2024-11-10T17:28:24.292Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/service/pavage-autobloquant-a-gatineau</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/interlocking-paving-in-gatineau/en"/>
-<lastmod>2024-08-14T00:34:21.928Z</lastmod>
+<lastmod>2024-10-06T16:20:09.282Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/service/reparation-de-fissures</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/crack-repair/en"/>
-<lastmod>2024-08-14T00:34:21.928Z</lastmod>
+<lastmod>2024-10-06T16:20:09.282Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/service/scellant-sous-pression</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/pressure-sealant/en"/>
-<lastmod>2024-08-14T00:34:21.928Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/trottoirs-et-bordures-de-beton</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/concrete-sidewalks-and-curbs/en"/>
-<lastmod>2024-08-14T00:34:21.928Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/murets-et-murs-de-soutenement</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/low-walls-and-retaining-walls/en"/>
-<lastmod>2024-08-14T00:34:21.928Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/installation-de-certains-drains</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/installation-of-certain-drains/en"/>
-<lastmod>2024-08-14T00:34:21.928Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/location-de-camion-et-pepine-avec-operateur</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/truck-and-truck-rental-with-operator/en"/>
-<lastmod>2024-08-14T00:34:21.928Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/location-de-fardiers</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/rental-of-flatbeds/en"/>
-<lastmod>2024-08-14T00:34:21.928Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/plain-paving-stone-in-gatineau/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/pave-uni-a-gatineau"/>
-<lastmod>2024-08-15T14:23:29.760Z</lastmod>
+<lastmod>2024-10-06T16:20:09.282Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/service/interlocking-paving-in-gatineau/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/pavage-autobloquant-a-gatineau"/>
-<lastmod>2024-08-15T14:23:29.760Z</lastmod>
+<lastmod>2024-10-06T16:20:09.282Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/service/crack-repair/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/reparation-de-fissures"/>
-<lastmod>2024-08-15T14:23:29.760Z</lastmod>
+<lastmod>2024-10-06T16:20:09.282Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://localhost:3004/service/pressure-sealant/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/scellant-sous-pression"/>
-<lastmod>2024-08-15T14:23:29.760Z</lastmod>
+<lastmod>2024-10-06T16:20:09.282Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/concrete-sidewalks-and-curbs/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/trottoirs-et-bordures-de-beton"/>
-<lastmod>2024-08-15T14:23:29.760Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/low-walls-and-retaining-walls/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/murets-et-murs-de-soutenement"/>
-<lastmod>2024-08-15T14:23:29.760Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/installation-of-certain-drains/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/installation-de-certains-drains"/>
-<lastmod>2024-08-15T14:23:29.760Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/truck-and-truck-rental-with-operator/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/location-de-camion-et-pepine-avec-operateur"/>
-<lastmod>2024-08-15T14:23:29.760Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/rental-of-flatbeds/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/location-de-fardiers"/>
-<lastmod>2024-08-15T14:23:29.760Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/blog/category1_fr/blog-posting/blog1_fr</loc>
-<lastmod>2024-07-30T23:25:03.000Z</lastmod>
+<loc>https://localhost:3004/blog/entretien-exterieur/blog-posting/quand-faire-le-scellant-pour-lasphalte</loc>
+<lastmod>2025-03-22T11:55:58.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
-<loc>https://localhost:3004/blog/category1_en/blog-posting/blog1_en</loc>
-<lastmod>2024-08-15T14:23:29.000Z</lastmod>
+<loc>https://localhost:3004/blog/entretien-exterieur/blog-posting/comment-installer-de-lasphalte-recycle</loc>
+<lastmod>2025-03-22T11:55:58.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://localhost:3004/blog/entretien-exterieur/blog-posting/ou-acheter-lasphalte-chaud</loc>
+<lastmod>2025-03-22T11:55:58.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://localhost:3004/blog/entretien-exterieur/blog-posting/asphalte-ou-macadam</loc>
+<lastmod>2025-03-22T11:55:58.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://localhost:3004/blog/entretien-exterieur/blog-posting/pourquoi-arroser-lasphalte</loc>
+<lastmod>2025-03-22T11:55:58.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://localhost:3004/blog/asphalt-and-sealing-tips/blog-posting/how-long-driveway-sealer-takes-to-dry</loc>
+<lastmod>2024-09-14T16:09:14.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://localhost:3004/blog/schema_1/blog-posting/schema1</loc>
+<lastmod>2024-09-05T15:40:17.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://localhost:3004/blog/parking-lot-maintenance/blog-posting/what-is-parking-lot-striping</loc>
+<lastmod>2024-09-15T00:01:33.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://localhost:3004/blog/parking-lot-maintenance/blog-posting/how-much-does-it-cost-to-maintain-a-parking-lot</loc>
+<lastmod>2024-09-15T00:01:33.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://localhost:3004/blog/parking-lot-maintenance/blog-posting/parking-lot-striping-how-long-it-takes-to-dry-and-how-long-It-lasts</loc>
+<lastmod>2024-09-17T00:23:46.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://localhost:3004/blog/asphalt-and-sealing-tips/blog-posting/how-long-driveway-sealer-last</loc>
+<lastmod>2024-09-17T00:23:46.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
