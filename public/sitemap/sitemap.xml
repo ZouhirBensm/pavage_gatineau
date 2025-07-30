@@ -134,6 +134,13 @@
 <priority>1</priority>
 </url>
 <url>
+<loc>https://localhost:3004/service/scellant-asphalte-gatineau</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/gatineau-asphalt-sealant/en"/>
+<lastmod>2025-06-12T16:46:37.798Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
 <loc>https://localhost:3004/service/interlocking-paving-in-gatineau/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/pavage-autobloquant-a-gatineau"/>
 <lastmod>2024-10-06T16:20:09.282Z</lastmod>
@@ -151,6 +158,13 @@
 <loc>https://localhost:3004/service/pressure-sealant/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/scellant-sous-pression"/>
 <lastmod>2024-10-06T16:20:09.282Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://localhost:3004/service/gatineau-asphalt-sealant/en</loc>
+<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/scellant-asphalte-gatineau"/>
+<lastmod>2025-06-12T16:46:37.798Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
