@@ -7,22 +7,6 @@
 
       <img class="main" src="<%= service.service_image_path %>" alt="<%= service.service_image_description %>">
 
-      <div class="tm-portfolio-name text-white tm-bg-green"
-        aria-label="<%= service.service_image_description %>">
-
-        <img src="<%= service.service_image_path %>"
-          alt="<%= service.service_image_description %>"
-          style="display:none;">
-
-      </div>
-
-      <style>
-        /* Select the first occurrence of the matched div */
-        section#tmPortfolio .tm-portfolio-item:nth-of-type(<%= i+1 %>) .tm-portfolio-name {
-          background-image: url('..<%= service.service_image_path %>');
-        }
-      </style>
-
       <div class="tm-portfolio-description">
         <h2 class="tm-text-black">
           <%= service.service_name %>
@@ -42,27 +26,13 @@
 
 
 
-
-
   <%
-  const more_service_img_alt = "A close-up view of a driveway with a combination of asphalt and interlocking stone pavers, showing a clean transition between the two materials and bordered by a stone curb."
+    const more_service_img_alt = is_english ? "Construction workers watch a large yellow asphalt roller compacting a new layer of asphalt on a road." : "Des ouvriers du bâtiment observent un grand rouleau compresseur jaune compacter une nouvelle couche d'asphalte sur une route.";
   %>
 
   <div class="tm-portfolio-item">
-    <div class="tm-portfolio-name text-white tm-bg-blue"
-      aria-label="<%= more_service_img_alt %>">
-      <img src="/img/more_services1.webp"
-        alt="<%= more_service_img_alt %>" style="display:none;">
-    </div>
 
-
-    <style>
-      section#tmPortfolio .tm-portfolio-item:nth-of-type(4) .tm-portfolio-name {
-        background-image: url('../img/more_services1.webp');
-      }
-    </style>
-
-
+    <img src="/img/services_home/4.webp" alt="<%= more_service_img_alt %>">
 
     <div class="tm-portfolio-description">
       <h2 class="tm-text-black">
@@ -83,7 +53,42 @@
 
       </div>
       </p>
-    </div>
-  </div>
-</div>
 
+    </div>
+
+  </div>
+
+
+
+
+  <% index_content.forEach((content, i)=> { %>
+
+
+
+    <div class="tm-portfolio-item">
+      <img src="<%= content.img_path %>" alt="<%= content.img_alt %>">
+
+      <div class="tm-portfolio-description">
+        <h2 class="tm-text-black">
+          <%= content.title %>
+        </h2>
+
+        <p class="mb-0">
+          <h3><%= content.sub_title %></h3>
+          <div><%= content.content %></div>
+        </p>
+      </div>
+    </div>
+
+  <% }); %>
+
+
+
+
+
+
+
+
+
+
+</div>
