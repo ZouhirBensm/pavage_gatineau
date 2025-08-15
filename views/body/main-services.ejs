@@ -1,8 +1,12 @@
-<div class="col-12">
+<div class="col-12 spacing">
+
 
   <% main_service_data.forEach((service, i)=> { %>
 
     <div class="tm-portfolio-item">
+
+      <img class="main" src="<%= service.service_image_path %>" alt="<%= service.service_image_description %>">
+
       <div class="tm-portfolio-name text-white tm-bg-green"
         aria-label="<%= service.service_image_description %>">
 
