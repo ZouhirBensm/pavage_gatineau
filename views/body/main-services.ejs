@@ -1,0 +1,86 @@
+
+<div class="col-12">
+
+  <% main_service_data.forEach((service, i)=> { %>
+
+    <div class="tm-portfolio-item">
+      <div class="tm-portfolio-name text-white tm-bg-green"
+        aria-label="<%= service.service_image_description %>">
+
+        <img src="<%= service.service_image_path %>"
+          alt="<%= service.service_image_description %>"
+          style="display:none;">
+
+      </div>
+
+      <style>
+        /* Select the first occurrence of the matched div */
+        section#tmPortfolio .tm-portfolio-item:nth-of-type(<%= i+1 %>) .tm-portfolio-name {
+          background-image: url('..<%= service.service_image_path %>');
+        }
+      </style>
+
+      <div class="tm-portfolio-description">
+        <h2 class="tm-text-black">
+          <%= service.service_name %>
+            <a class="tm-title-small" href="/service/<%= service.slug %>">
+              <%= portfolio_section.op1 %>
+            </a>
+        </h2>
+        <p class="mb-0">
+        <h3>
+          <%= service.service_sub_title %>
+        </h3>
+        <div><%- service.service_description %></div>
+        </p>
+      </div>
+    </div>
+  <% }); %>
+
+
+
+
+
+  <%
+  const more_service_img_alt = "A close-up view of a driveway with a combination of asphalt and interlocking stone pavers, showing a clean transition between the two materials and bordered by a stone curb."
+  %>
+
+  <div class="tm-portfolio-item">
+    <div class="tm-portfolio-name text-white tm-bg-blue"
+      aria-label="<%= more_service_img_alt %>">
+      <img src="/img/more_services1.webp"
+        alt="<%= more_service_img_alt %>" style="display:none;">
+    </div>
+
+
+    <style>
+      section#tmPortfolio .tm-portfolio-item:nth-of-type(4) .tm-portfolio-name {
+        background-image: url('../img/more_services1.webp');
+      }
+    </style>
+
+
+
+    <div class="tm-portfolio-description">
+      <h2 class="tm-text-black">
+        <%= portfolio_section.op2 %>
+        <a class="tm-title-small" href="#">
+          <%= portfolio_section.op1 %>
+        </a>
+      </h2>
+      
+      <p class="mb-0">
+      <div>
+        <ul>
+          <% extra_service_pages.forEach(function(service) { %>
+            <li><a href="/service/<%= service.slug %>"><%= service.title %></a></li>
+          <% }); %>
+        </ul>
+
+
+      </div>
+      </p>
+    </div>
+  </div>
+</div>
+
