@@ -6,11 +6,17 @@
   <div class="tm-welcome-left">
     <span class="tm-welcome-title"><%= welcome_section.op1 %></span>
     <p class="pb-0" itemscope itemtype="https://schema.org/Organization" itemid="#Organization">
-      <a rel="nofollow" href="<%= welcome_section.op1_link %>" itemprop="url"><%= business_data.street_address %>
+    <a rel="nofollow" href="<%= welcome_section.op1_link %>" itemprop="url"><span itemprop="location" itemscope itemtype="https://schema.org/Place"><span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="streetAddress"><%= business_data.street_address %></span>,
+          <span itemprop="addressLocality"><%= business_data.address_city %></span>, <span itemprop="addressRegion"><%= business_data.address_province_state %></span>
+          <span itemprop="postalCode"><%= business_data.postal_code %></span>
+          <span itemprop="addressCountry"><%= business_data.address_country %></span></span></span>
+    </a>
+
+      <!-- <a rel="nofollow" href="<%= welcome_section.op1_link %>" itemprop="url"><%= business_data.street_address %>
         <%= business_data.address_city %>, <%= business_data.address_province_state %>
         <%= business_data.postal_code %>
         <%= business_data.address_country %>
-      </a>
+      </a> -->
     </p>
 
     <div>
