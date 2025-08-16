@@ -18,7 +18,7 @@ function generateBreadcrumbListSchema(blogElements, servicePages) {
 
   // Static breadcrumb items
   let staticItems = [
-    { name: "##", item: "https://pavagegatineau.com/" },
+    { name: "Pavage Gatineau Asphalte Gatineau Earnanswers Home Page", item: "https://pavagegatineau.com/" },
     { name: "Request Free Quote", item: "https://pavagegatineau.com/demande-de-devis-gratuit" },
     { name: "Organisation", item: "https://pavagegatineau.com/organisation" },
     { name: "À propos", item: "https://pavagegatineau.com/a-propos" },
