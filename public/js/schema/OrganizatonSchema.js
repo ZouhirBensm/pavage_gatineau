@@ -12,7 +12,7 @@ console.log(formattedPhone)
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": `organization`,
+  "@id": `#Organization`,
   "name": business_data.business_name,
   "url": business_data.website_main_url,
   "logo": `${business_data.website_main_url}/img/logo_head2.png`,
