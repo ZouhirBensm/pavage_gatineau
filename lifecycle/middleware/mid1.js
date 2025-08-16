@@ -186,7 +186,7 @@ async function mid1(req, res, next) {
   // console.log(extra_service_pages_fr)
   // console.log(index_content_fr)
   // console.log(blog_elements_fr)
-  console.log(business_data_fr)
+  // console.log(business_data_fr)
   // console.log(main_service_data_fr)
   // console.log(review_data_fr)
   // console.log(faq_fr)

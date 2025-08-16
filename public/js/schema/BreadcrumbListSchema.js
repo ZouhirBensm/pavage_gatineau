@@ -3,7 +3,7 @@
 // console.log(extra_service_pages); // extra services
 
 
-
+console.log(is_english);
 
 
 // Function to generate breadcrumb list schema
@@ -16,15 +16,16 @@ function generateBreadcrumbListSchema(blogElements, servicePages) {
 
 
 
+
   // Static breadcrumb items
   let staticItems = [
-    { name: "Pavage Gatineau Asphalte Gatineau Earnanswers Home Page", item: "https://pavagegatineau.com/" },
-    { name: "Request Free Quote", item: "https://pavagegatineau.com/demande-de-devis-gratuit" },
-    { name: "Organisation", item: "https://pavagegatineau.com/organisation" },
-    { name: "À propos", item: "https://pavagegatineau.com/a-propos" },
-    { name: "Plan du site", item: "https://pavagegatineau.com/plan-du-site" },
-    { name: "Avertissement légal", item: "https://pavagegatineau.com/tiroir1/avertissement-legal" },
-    { name: "Politique de confidentialité", item: "https://pavagegatineau.com/tiroir1/politique-de-confidentialite" },
+    { name: is_english ? "Pavage Gatineau Asphalte Gatineau Earnanswers Home Page" : "Page d'accueil de Pavage Gatineau Asphalte Gatineau Earnanswers", item: "https://pavagegatineau.com/" },
+    { name: is_english ? "Request Free Quote" : "Demander un devis gratuit", item: "https://pavagegatineau.com/demande-de-devis-gratuit" },
+    { name: is_english ? "Organisation" : "Organisation", item: "https://pavagegatineau.com/organisation" },
+    { name: is_english ? "À propos" : "À propos", item: "https://pavagegatineau.com/a-propos" },
+    { name: is_english ? "Plan du site" : "Plan du site", item: "https://pavagegatineau.com/plan-du-site" },
+    { name: is_english ? "Avertissement légal" : "Avertissement légal", item: "https://pavagegatineau.com/tiroir1/avertissement-legal" },
+    { name: is_english ? "Politique de confidentialité" : "Politique de confidentialité", item: "https://pavagegatineau.com/tiroir1/politique-de-confidentialite" },
     // { name: "Service name 1", item: "https://pavagegatineau.com/service/service1" },
     // { name: "Service name 2", item: "https://pavagegatineau.com/service/service2" },
     // { name: "Service name 3", item: "https://pavagegatineau.com/service/service3" }
