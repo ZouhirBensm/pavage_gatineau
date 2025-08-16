@@ -52,7 +52,9 @@ div.tm-portfolio-item > img.main {
 
 div.tm-portfolio-item > img {
   width: 500px;
-  height: 300px;
+  /* In cases where the extra service images have different dimensions than the main services */
+  /* height: 300px; */
+  height: 650px;
   margin: unset;
   box-shadow:
   0px 5.1px 1.9px -18px rgba(0, 0, 0, 0.19),
@@ -94,7 +96,3 @@ div.tm-portfolio-item > img {
   }
 }
 
-
-/* .container-fluid {
-  max-width: unset;
-} */
