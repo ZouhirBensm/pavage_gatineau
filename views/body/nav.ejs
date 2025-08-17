@@ -1,14 +1,8 @@
 <nav id="top">
   
-  <% if (is_english) { %>
-    <a href="/en">
-      <img src="/img/logo_head2.png" alt="<%= nav.logo_img_alt %>" width="60px" height="60px">
-    </a>
-  <% } else { %>
-    <a href="/">
-      <img src="/img/logo_head2.png" alt="<%= nav.logo_img_alt %>" width="60px" height="60px">
-    </a>
-  <% } %>
+  <a href="<%= is_english ? '/en' : '/' %>">
+    <img src="/img/logo_head2.png" alt="<%= nav.logo_img_alt %>" width="60px" height="60px">
+  </a>
 
 
   <a href="<%= nav.op1_link %>">
