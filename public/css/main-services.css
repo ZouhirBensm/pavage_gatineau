@@ -1,23 +1,23 @@
 div.spacing {
-  padding: 80px;
-  margin: 8px;
+  /* padding: 80px; */
+  /* margin: 8px; */
 }
 
 @media (max-width: 1232px) {
     div.spacing {
-    padding: 60px;
+    /* padding: 60px; */
   }
 }
 
 @media (max-width: 520px) {
   div.spacing {
-    padding: 50px;
+    /* padding: 50px; */
   }
 }
 
 @media (max-width: 390px) {
   div.spacing {
-    padding: 40px 20px 10px;
+    /* padding: 40px 20px 10px; */
   }
 }
 

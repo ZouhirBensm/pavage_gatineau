@@ -48,7 +48,7 @@ DROP TABLE IF EXISTS `about_page_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `about_page_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `page_content` text COLLATE utf8mb4_unicode_ci,
+  `page_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -76,8 +76,8 @@ CREATE TABLE `all_data_per_page_en` (
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `page_url_identify` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `under_h1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `eq_lang_page` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `last_modified` varchar(26) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `eq_lang_page` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_modified` varchar(26) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -101,12 +101,12 @@ DROP TABLE IF EXISTS `all_data_per_page_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `all_data_per_page_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `page_url_identify` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `under_h1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `eq_lang_page` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `last_modified` varchar(26) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `page_url_identify` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `under_h1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `eq_lang_page` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `last_modified` varchar(26) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -169,8 +169,8 @@ CREATE TABLE `blog_element_fr` (
   `datetime_edited` datetime NOT NULL,
   `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `category_id` int DEFAULT NULL,
-  `meta_description` text COLLATE utf8mb4_unicode_ci,
-  `under_h1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `under_h1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `blog_element_category_FK` (`category_id`),
   CONSTRAINT `blog_element_fr_category_fr_FK` FOREIGN KEY (`category_id`) REFERENCES `category_fr` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE
@@ -220,7 +220,7 @@ DROP TABLE IF EXISTS `blog_page_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `blog_page_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `h3_1` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `h3_1` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -284,21 +284,21 @@ DROP TABLE IF EXISTS `business_data_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `business_data_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `website_main_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `business_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `business_description` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `street_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address_city` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address_province_state` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `postal_code` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address_country` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `telephone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `website_main_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `business_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `business_description` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `street_address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address_city` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address_province_state` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `postal_code` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address_country` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `telephone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `latitude` double DEFAULT NULL,
   `longitude` double DEFAULT NULL,
-  `telephone2` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `calendly_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `telephone2` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `calendly_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `home_page_published_date` date DEFAULT NULL,
   `home_page_updated_date` date DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -352,7 +352,7 @@ CREATE TABLE `category_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
   `category_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `category_description` text COLLATE utf8mb4_unicode_ci,
+  `category_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -401,8 +401,8 @@ DROP TABLE IF EXISTS `category_page_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `category_page_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `under_h1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `eq_lang_page` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `under_h1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `eq_lang_page` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -454,11 +454,11 @@ DROP TABLE IF EXISTS `demande_de_devis_gratuit_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `demande_de_devis_gratuit_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `placeholder_name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `valid_format` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `placeholder_message` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `button` varchar(12) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `h2_1` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `placeholder_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `valid_format` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `placeholder_message` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `button` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `h2_1` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -488,7 +488,7 @@ CREATE TABLE `extra_service_page_en` (
   `last_modified` varchar(26) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `under_h1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `eq_lang_page` varchar(528) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `eq_lang_page` varchar(528) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -516,9 +516,9 @@ CREATE TABLE `extra_service_page_fr` (
   `html_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `last_modified` varchar(26) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `under_h1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `eq_lang_page` varchar(528) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `under_h1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `eq_lang_page` varchar(528) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -567,8 +567,8 @@ DROP TABLE IF EXISTS `faq_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `faq_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `question` varchar(528) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `answer` text COLLATE utf8mb4_unicode_ci,
+  `question` varchar(528) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `answer` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -629,20 +629,20 @@ DROP TABLE IF EXISTS `footer_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `footer_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `youtube_alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `twitter_alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `pinterest_alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `quora_alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email_alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sitemap` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `blog` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `legal_disclaimer` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `privacy_policy` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sitemap_path` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `blog_path` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `legal_disclaimer_path` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `privacy_policy_path` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `powered` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `youtube_alt` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `twitter_alt` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pinterest_alt` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `quora_alt` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email_alt` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sitemap` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `blog` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `legal_disclaimer` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `privacy_policy` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sitemap_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `blog_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `legal_disclaimer_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `privacy_policy_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `powered` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -694,11 +694,11 @@ DROP TABLE IF EXISTS `index_content_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `index_content_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `content` text COLLATE utf8mb4_unicode_ci,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `img_alt` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `img_path` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sub_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `img_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -746,7 +746,7 @@ DROP TABLE IF EXISTS `legal_notice_page_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `legal_notice_page_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `html_content` text COLLATE utf8mb4_unicode_ci,
+  `html_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -780,10 +780,10 @@ CREATE TABLE `main_service_data_en` (
   `service_image_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `service_image_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `last_modified` varchar(26) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `web_page_content` text COLLATE utf8mb4_unicode_ci,
-  `alt_img1` varchar(528) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `alt_img2` varchar(528) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `alt_img3` varchar(528) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `web_page_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `alt_img1` varchar(528) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt_img2` varchar(528) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt_img3` varchar(528) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -807,20 +807,20 @@ DROP TABLE IF EXISTS `main_service_data_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `main_service_data_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `service_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_image_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_page_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_sub_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_description` text COLLATE utf8mb4_unicode_ci,
+  `service_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_image_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_page_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_sub_title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `service_image_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `service_image_description` text COLLATE utf8mb4_unicode_ci,
-  `last_modified` varchar(26) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `web_page_content` text COLLATE utf8mb4_unicode_ci,
-  `alt_img1` varchar(528) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `alt_img2` varchar(528) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `alt_img3` varchar(528) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `service_image_description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `last_modified` varchar(26) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `web_page_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `alt_img1` varchar(528) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt_img2` varchar(528) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alt_img3` varchar(528) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -847,7 +847,7 @@ CREATE TABLE `nav_en` (
   `op1` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `op2` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `logo_img_alt` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `op1_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `op1_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -873,8 +873,8 @@ CREATE TABLE `nav_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
   `op1` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `op2` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `logo_img_alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `op1_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `logo_img_alt` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `op1_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -922,7 +922,7 @@ DROP TABLE IF EXISTS `organization_page_data_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `organization_page_data_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `page_content` text COLLATE utf8mb4_unicode_ci,
+  `page_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -976,13 +976,13 @@ DROP TABLE IF EXISTS `plan_du_site_page_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `plan_du_site_page_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `page_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `under_h1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `meta_description` varchar(528) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `h2_1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `h3_1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `h3_2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `eq_lang_page` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `page_title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `under_h1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_description` varchar(528) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `h2_1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `h3_1` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `h3_2` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `eq_lang_page` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1031,8 +1031,8 @@ DROP TABLE IF EXISTS `portfolio_section_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `portfolio_section_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `op1` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `op2` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `op1` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `op2` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1056,7 +1056,7 @@ DROP TABLE IF EXISTS `privacy_policy_page_en`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `privacy_policy_page_en` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `html_content` text COLLATE utf8mb4_unicode_ci,
+  `html_content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1130,9 +1130,9 @@ DROP TABLE IF EXISTS `review_data_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_data_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `rating_value` double DEFAULT NULL,
-  `review_body` text COLLATE utf8mb4_unicode_ci,
+  `review_body` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1161,8 +1161,8 @@ CREATE TABLE `welcome_section_en` (
   `op2` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `banner_img_path` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `map_img_alt` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `op1_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `op2_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `op1_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `op2_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1186,13 +1186,13 @@ DROP TABLE IF EXISTS `welcome_section_fr`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `welcome_section_fr` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `banner_img_alt` text COLLATE utf8mb4_unicode_ci,
-  `op1` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `op2` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `banner_img_path` text COLLATE utf8mb4_unicode_ci,
-  `map_img_alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `op1_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `op2_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_img_alt` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `op1` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `op2` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner_img_path` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `map_img_alt` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `op1_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `op2_link` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1216,4 +1216,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-08-17 12:38:32
+-- Dump completed on 2025-08-20  9:47:09
