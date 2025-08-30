@@ -63,33 +63,47 @@
 
 
   <!-- Portfolio section -->
-  <section id="tmPortfolio">
+  <section id="tmPortfolio" class="blog-posting">
     <div class="container-fluid">
       <div class="row">
         <div id="blog-posting" class="col-12">
           <div>
             <div id="bar1">
               <span class="category-template"><%= blog_element.category.category_name %></span>
+
               <div id="dates">
                 <span id="date-published">
-                  Published: <%= new Date(blog_element.datetime_published).toLocaleDateString('en-US', {
+                  <b><u>Published</u></b>: <%= new Date(blog_element.datetime_published).toLocaleDateString('en-US', { year: 'numeric' ,
+                    month: 'short' , day: 'numeric' }) %>
+                </span>
+                <span id="date-edited">
+                  <b><u>Edited</u></b>: <%= new Date(blog_element.datetime_edited).toLocaleDateString('en-US', { year: 'numeric' ,
+                    month: 'short' , day: 'numeric' }) %>
+                </span>
+              </div>
+
+              <!-- <div id="dates">
+                <span id="date-published">
+                  Published: < %= new Date(blog_element.datetime_published).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'short',
                     day: 'numeric'
                   }) %>
                 </span>
                 <span id="date-edited">
-                  Edited: <%= new Date(blog_element.datetime_edited).toLocaleDateString('en-US', {
+                  Edited: < %= new Date(blog_element.datetime_edited).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'short',
                     day: 'numeric'
                   }) %>
                 </span>
-              </div>
+              </div> -->
+
             </div>
 
 
-            <div id="content-template" class="tm-extra-service-description"><%- blog_element.html_content %></div>
+             <!-- class="tm-extra-service-description" -->
+            <div id="content-template"><%- blog_element.html_content %></div>
           </div>
         </div>
       </div>
