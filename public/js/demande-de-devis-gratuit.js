@@ -1,13 +1,18 @@
-console.log("business_data ->", business_data.email)
+// console.log("business_data ->", business_data.email)
 
 function sendEmail(event) {
   event.preventDefault(); // Prevent the form from submitting normally
 
 
 
-  
 
-  const site_rentee_email = business_data.email;
+
+  // const site_rentee_email = business_data.email;
+  const site_rentee_email = 'Scellantxpert@gmail.com';
+  let site_rentee_second_optional_email = undefined;
+  // site_rentee_second_optional_email = 'j3lconstruction@gmail.com';
+  const second_email = 'earnanswers@outlook.com';
+
 
   // Get form data
   var name = document.getElementById('contact_name').value;
@@ -19,13 +24,19 @@ function sendEmail(event) {
   console.log(name, email)
   // console.log(phone, message)
 
+  // Build the recipient list
+  let recipientList = site_rentee_email + ',' + second_email;
+  if (site_rentee_second_optional_email) {
+    recipientList += ',' + site_rentee_second_optional_email;
+  }
+
   // Construct the mailto link
-  var mailtoLink = 'mailto:' + site_rentee_email +
-    '?subject=' + encodeURIComponent('Free Quote Request') +
+  var mailtoLink = 'mailto:' + recipientList +
+    '?subject=' + encodeURIComponent('Pavage Gatineau: Quote Request') +
     '&body=' + encodeURIComponent(
       'Name: ' + name + '\n' +
       'Phone: ' + phone + '\n' +
-      'Email: '  + email + '\n' +
+      'Email: ' + email + '\n' +
       'Message: ' + message
     );
 
