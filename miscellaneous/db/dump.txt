@@ -271,7 +271,7 @@ CREATE TABLE `business_data_en` (
 
 LOCK TABLES `business_data_en` WRITE;
 /*!40000 ALTER TABLE `business_data_en` DISABLE KEYS */;
-INSERT INTO `business_data_en` VALUES (1,'https://pavagegatineau.com','Paving Gatineau Asphalt Gatineau Earnanswers','Paving and Asphalt Service','Paving and asphalt repair service for driveways, parking lots and roads in Gatineau.','1700 Chem. Pink #121','Gatineau','QC','J9J 3N7','Canada','+1 (819) 485 1489',45.446837910569435,-75.81363654716525,'8194851489','pavagegatineau@outlook.com','https://calendly.com/pavagegatineau/pavage-gatineau-meeting','2024-08-27','2025-08-20');
+INSERT INTO `business_data_en` VALUES (1,'https://pavagegatineau.com','Paving Gatineau Asphalt Gatineau Earnanswers','Paving and Asphalt Service','Paving and asphalt repair service for driveways, parking lots and roads in Gatineau.','1700 Chem. Pink #121','Gatineau','QC','J9J 3N7','Canada','+1 (819) 485 1489',45.446837910569435,-75.81363654716525,'8194851489','pavagegatineau@outlook.com','https://calendly.com/pavagegatineau/pavagegatineau','2024-08-27','2025-08-20');
 /*!40000 ALTER TABLE `business_data_en` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -311,7 +311,7 @@ CREATE TABLE `business_data_fr` (
 
 LOCK TABLES `business_data_fr` WRITE;
 /*!40000 ALTER TABLE `business_data_fr` DISABLE KEYS */;
-INSERT INTO `business_data_fr` VALUES (1,'https://pavagegatineau.com','Pavage Gatineau Asphalte Gatineau Earnanswers','Service de Pavage et d\'Asphalte','Service de pavage et réparation d\'asphalte pour allées, stationnements et routes à Gatineau.','1700 Chem. Pink #121','Gatineau','QC','J9J 3N7','Canada','+1 (819) 485 1489',45.446837910569435,-75.81363654716525,'8194851489','pavagegatineau@outlook.com','https://calendly.com/pavagegatineau/pavage-gatineau-meeting','2024-08-27','2025-08-20');
+INSERT INTO `business_data_fr` VALUES (1,'https://pavagegatineau.com','Pavage Gatineau Asphalte Gatineau Earnanswers','Service de Pavage et d\'Asphalte','Service de pavage et réparation d\'asphalte pour allées, stationnements et routes à Gatineau.','1700 Chem. Pink #121','Gatineau','QC','J9J 3N7','Canada','+1 (819) 485 1489',45.446837910569435,-75.81363654716525,'8194851489','pavagegatineau@outlook.com','https://calendly.com/pavagegatineau/pavagegatineau','2024-08-27','2025-08-20');
 /*!40000 ALTER TABLE `business_data_fr` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1216,4 +1216,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-08-30 12:44:52
+-- Dump completed on 2025-09-06 14:13:43
