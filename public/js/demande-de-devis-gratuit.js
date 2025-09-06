@@ -8,9 +8,9 @@ function sendEmail(event) {
 
 
   // const site_rentee_email = business_data.email;
-  const site_rentee_email = 'Scellantxpert@gmail.com';
+  const site_rentee_email = 'pavagegatineau@gmail.com';
   let site_rentee_second_optional_email = undefined;
-  // site_rentee_second_optional_email = 'j3lconstruction@gmail.com';
+  site_rentee_second_optional_email = 'entreprisesxpert@gmail.com';
   const second_email = 'earnanswers@outlook.com';
 
 
