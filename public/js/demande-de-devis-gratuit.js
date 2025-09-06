@@ -12,7 +12,10 @@ function sendEmail(event) {
   // Scellantxpert@gmail.com
   let site_rentee_second_optional_email = undefined;
   site_rentee_second_optional_email = 'entreprisesxpert@gmail.com';
+
   const second_email = 'earnanswers@outlook.com';
+  let second_email_optional_email = undefined;
+  second_email_optional_email = 'pavagegatineau@outlook.com';
 
 
   // Get form data
@@ -29,6 +32,10 @@ function sendEmail(event) {
   let recipientList = site_rentee_email + ',' + second_email;
   if (site_rentee_second_optional_email) {
     recipientList += ',' + site_rentee_second_optional_email;
+  }
+
+  if (second_email_optional_email) {
+    recipientList += ',' + second_email_optional_email;
   }
 
   // Construct the mailto link
