@@ -217,8 +217,8 @@ span.tm-brand-name {
 #tmPortfolio {
   padding-top: 80px;
   /* Here@ */
-  background: white;
-
+  background: white; 
+  
   padding-bottom: 80px;
   padding-left: 20px;
   padding-right: 20px;
@@ -320,7 +320,7 @@ p {
   padding: 54px 34px 44px;
 }
 
-.tm-contact-item>p:nth-of-type(2) {
+.tm-contact-item > p:nth-of-type(2) {
   letter-spacing: 2px;
 }
 
@@ -438,12 +438,6 @@ p {
   .tm-portfolio-description {
     padding: 20px 30px;
   }
-
-  /* #tmPortfolio {
-    padding-left: unset;
-    padding-right: unset;
-  } */
-
 }
 
 @media (max-width: 572px) {
