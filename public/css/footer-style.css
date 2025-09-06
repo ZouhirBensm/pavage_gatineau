@@ -36,7 +36,11 @@ body>footer>div>div#social-media>a[href='https://www.instagram.com/pavagegatinea
   content: url('../img/icons/instagram_orange.svg');
 }
 
-body>footer>div>div#social-media>a[href='mailto:pavagegatineau@outlook.com']>img:hover {
+/* body>footer>div>div#social-media>a[href='mailto:pavagegatineau@outlook.com']>img:hover {
+  content: url('../img/icons/email_orange.svg');
+} */
+
+body>footer>div>div#social-media>a#email>img:hover {
   content: url('../img/icons/email_orange.svg');
 }
 
