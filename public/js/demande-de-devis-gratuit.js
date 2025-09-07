@@ -4,18 +4,17 @@ function sendEmail(event) {
   event.preventDefault(); // Prevent the form from submitting normally
 
 
+  const email_1 = 'pavagegatineau@gmail.com'; // mailto
+  const email_2 = 'pavagegatineau@outlook.com'; // cc
+
+  let optional_email_3 = undefined;
+  optional_email_3 = 'entreprisesxpert@gmail.com'; // cc
+  let optional_email_4 = undefined;
+  // optional_email_4 = 'earnanswers@outlook.com';
 
 
-
-  // const site_rentee_email = business_data.email;
-  const site_rentee_email = 'pavagegatineau@gmail.com';
-  // Scellantxpert@gmail.com
-  let site_rentee_second_optional_email = undefined;
-  site_rentee_second_optional_email = 'entreprisesxpert@gmail.com';
-
-  const second_email = 'earnanswers@outlook.com';
-  let second_email_optional_email = undefined;
-  second_email_optional_email = 'pavagegatineau@outlook.com';
+  
+  // const email_1 = business_data.email;
 
 
   // Get form data
@@ -28,19 +27,23 @@ function sendEmail(event) {
   console.log(name, email)
   // console.log(phone, message)
 
+
   // Build the recipient list
-  let recipientList = site_rentee_email + ',' + second_email;
-  if (site_rentee_second_optional_email) {
-    recipientList += ',' + site_rentee_second_optional_email;
+  let recipientList = email_1;  
+  let ccList = email_2;
+
+  if (optional_email_3) {
+    ccList += ',' + optional_email_3;
   }
 
-  if (second_email_optional_email) {
-    recipientList += ',' + second_email_optional_email;
+  if (optional_email_4) {
+    ccList += ',' + optional_email_4;
   }
 
   // Construct the mailto link
   var mailtoLink = 'mailto:' + recipientList +
-    '?subject=' + encodeURIComponent('Pavage Gatineau: Quote Request') +
+    '?cc=' + encodeURIComponent(ccList) +
+    '&subject=' + encodeURIComponent('Pavage Gatineau: Quote Request') +
     '&body=' + encodeURIComponent(
       'Name: ' + name + '\n' +
       'Phone: ' + phone + '\n' +
