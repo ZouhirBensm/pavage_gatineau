@@ -4,8 +4,8 @@ function sendEmail(event) {
   event.preventDefault(); // Prevent the form from submitting normally
 
 
-  const email_1 = 'pavagegatineau@gmail.com'; // mailto
-  const email_2 = 'pavagegatineau@outlook.com'; // cc
+  const email_1 = 'pavagegatineau@outlook.com'; // mailto
+  const email_2 = 'pavagegatineau@gmail.com'; // cc
 
   let optional_email_3 = undefined;
   optional_email_3 = 'entreprisesxpert@gmail.com'; // cc
