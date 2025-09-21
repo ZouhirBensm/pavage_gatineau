@@ -3,16 +3,7 @@
   <script src="/js/schema/WebSiteSchema.js"></script>
   <script src="/js/schema/ServiceSchema.js"></script>
   <script src="/js/schema/BreadcrumbListSchema.js"></script>
-  
-  <style>
-    @media (max-width: 850px) {
-      .responsive-img {
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-    }
-  </style>
+
 
 <% } else if (req_path === '/demande-de-devis-gratuit' || req_path === '/request-a-free-quote/en') { %>
 
@@ -33,6 +24,9 @@
 <% } else if (/^\/blog\/[^\/]+\/blog-posting\/[^\/]+$/.test(req_path)) { %>
 
   <script src="/js/schema/BlogPostingSchema.js"></script>
+
+<% } else if (req_path === '/backlink/1') { %>
+
 
 
 <% } else { %>

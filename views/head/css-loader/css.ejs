@@ -7,12 +7,22 @@
 
 
 
-<% if (req_path === '/' || req_path === '/en') { %>
+<% if (req_path === '/' || req_path === '/en' || req_path === '/backlink/1') { %>
 
   <link rel="stylesheet" href="/css/main-services.css" />
   <link rel="stylesheet" href="/css/portfolio-section.css" />
   <link rel="stylesheet" href="/css/review-section.css" />
   <link rel="stylesheet" href="/css/faq-style.css" />
+
+  <style>
+    @media (max-width: 850px) {
+      .responsive-img {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  </style>
 
 <% } else if (req_path === '/demande-de-devis-gratuit' || req_path === '/request-a-free-quote/en') { %>
 

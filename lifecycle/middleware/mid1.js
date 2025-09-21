@@ -3,7 +3,7 @@ async function mid1(req, res, next) {
 
   console.log(is_english, '\n\n')
 
-  if(is_english) return next()
+  if (is_english) return next()
 
   console.log("French mode is on mid1")
 
@@ -11,7 +11,7 @@ async function mid1(req, res, next) {
   const now = new Date();
   console.log(now);
 
-  
+
   // const req_path = req.path
   // const req_url = req.url
 
@@ -96,7 +96,9 @@ async function mid1(req, res, next) {
 
 
 
-  const all_data_per_page_fr = await db.all_data_per_page_fr.findOne({
+  let all_data_per_page_fr
+
+  all_data_per_page_fr = await db.all_data_per_page_fr.findOne({
     where: {
       page_url_identify: res.locals.req_path,
     },
@@ -105,8 +107,16 @@ async function mid1(req, res, next) {
   });
 
   if (!all_data_per_page_fr) {
-    const error = new Error("No all_data_per_page_fr found!")
-    return next(error)
+    // const error = new Error("No all_data_per_page_fr found!")
+    // return next(error)
+
+    all_data_per_page_fr = await db.all_data_per_page_fr.findOne({
+      where: {
+        page_url_identify: '/',
+      },
+      raw: true
+      // attributes: ['slug', 'title'],
+    });
   }
 
 
@@ -181,7 +191,7 @@ async function mid1(req, res, next) {
 
 
 
-  
+
 
   // console.log(extra_service_pages_fr)
   // console.log(index_content_fr)
@@ -191,7 +201,7 @@ async function mid1(req, res, next) {
   // console.log(review_data_fr)
   // console.log(faq_fr)
   // console.log(footer_fr)
-  
+
 
 
 

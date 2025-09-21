@@ -1,8 +1,8 @@
 async function mid1_en(req, res, next) {
-  
+
   console.log(is_english, '\n\n')
 
-  if(!is_english) return next()
+  if (!is_english) return next()
 
   console.log("English mode is on.\n\n")
 
@@ -45,7 +45,7 @@ async function mid1_en(req, res, next) {
 
 
 
-  
+
   // all tables here exist in en version and are populated in french
 
 
@@ -128,8 +128,9 @@ async function mid1_en(req, res, next) {
 
 
 
+  let all_data_per_page_en
 
-  const all_data_per_page_en = await db.all_data_per_page_en.findOne({
+  all_data_per_page_en = await db.all_data_per_page_en.findOne({
     where: {
       page_url_identify: res.locals.req_path,
     },
@@ -137,8 +138,16 @@ async function mid1_en(req, res, next) {
   });
 
   if (!all_data_per_page_en) {
-    const error = new Error("No all_data_per_page_en found!")
-    return next(error)
+    // const error = new Error("No all_data_per_page_en found!")
+    // return next(error)
+
+    all_data_per_page_en = await db.all_data_per_page_en.findOne({
+      where: {
+        page_url_identify: '/en',
+      },
+      raw: true
+    });
+
   }
 
 
@@ -280,10 +289,10 @@ async function mid1_en(req, res, next) {
   // console.log(review_data_fr)
   // console.log(faq_fr)
   // console.log(footer_fr)
-  
 
 
-  
+
+
 
 
 

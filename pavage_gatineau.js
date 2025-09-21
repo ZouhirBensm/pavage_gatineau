@@ -169,6 +169,41 @@ app.get(['/', '/en'], middleware1.mid1, middleware1_en.mid1_en, async (req, res)
 
 
 
+// TODO ! HERE need to reduce the over query of all the elements?
+app.get('/backlink/1', middleware1.mid1, async (req, res) => {
+
+
+  const all_data_per_page = {
+    ...res.locals.index_page_data.all_data_per_page,
+    title: 'List of links for Google crawler 1',
+    description: 'All the links for webpages that contain themselves links to one of the site I control for SEO crawler purposes',
+    page_url_identify: '/backlink/1',
+    under_h1: 'Backlinks',
+    eq_lang_page: '/backlink/1',
+    last_modified: '2025-09-20T10:27:07.077Z',
+    // css_link: undefined,
+    // schema_script: undefined,
+    // title_meta_canonical: undefined,
+    // front_end_script_needed_to_serve_variables: undefined,
+    // brochure_text1: undefined,
+    // brochure_text2: undefined,
+    // rendered_title_meta_canonical: undefined,
+    // rendered_front_end_script_needed_to_serve_variables: undefined,
+  }
+
+
+  res.locals.index_page_data = {
+    ...res.locals.index_page_data,
+    all_data_per_page: all_data_per_page
+  }
+
+
+  // console.log(res.locals.index_page_data)
+  return res.render('backlink1', { ...res.locals.index_page_data });
+});
+
+
+
 
 
 // /demande-de-devis-gratuit/:en?
@@ -303,7 +338,7 @@ app.get(['/blog/:category', '/blog/:category/en'], middleware4.mid1, middleware4
 
 
 
-app.get('/blog/:category/blog-posting/:title', middleware0.mid1, middleware4.mid1, middleware4_en.mid1, middleware8.mid1,  async (req, res, next) => {
+app.get('/blog/:category/blog-posting/:title', middleware0.mid1, middleware4.mid1, middleware4_en.mid1, middleware8.mid1, async (req, res, next) => {
 
 
   // console.log("\n\n______________________\n\n (*)->: \n", res.locals.index_page_data)
@@ -327,23 +362,23 @@ app.get(['/tiroir1/mention-legale', '/drawer1/legal-notice/en'], middleware4.mid
   let legal_notice_page_fr, legal_notice_page_en
 
 
-  if(is_english) {
+  if (is_english) {
     // english
     legal_notice_page_en = await db.legal_notice_page_en.findOne({
       raw: true
     });
-  
+
     if (!legal_notice_page_en) {
       const error = new Error("No legal_notice_page_en found!")
       return next(error)
     }
-  
+
   } else {
     // french
     legal_notice_page_fr = await db.legal_notice_page_fr.findOne({
       raw: true
     });
-  
+
     if (!legal_notice_page_fr) {
       const error = new Error("No legal_notice_page_fr found!")
       return next(error)
@@ -374,34 +409,34 @@ app.get(['/tiroir1/politique-de-confidentialite', '/drawer1/privacy-policy/en'],
   let privacy_policy_page_fr, privacy_policy_page_en, rendered_privacy_policy_page_en, rendered_privacy_policy_page_fr
 
 
-  if(is_english) {
+  if (is_english) {
     // english
     privacy_policy_page_en = await db.privacy_policy_page_en.findOne({
       raw: true
     });
-  
+
     if (!privacy_policy_page_en) {
       const error = new Error("No privacy_policy_page_en found!")
       return next(error)
     }
 
-    rendered_privacy_policy_page_en = ejs.render(privacy_policy_page_en.html_content, { 
+    rendered_privacy_policy_page_en = ejs.render(privacy_policy_page_en.html_content, {
       business_data: res.locals.index_page_data.business_data
     });
 
-  
+
   } else {
     // french
     privacy_policy_page_fr = await db.privacy_policy_page_fr.findOne({
       raw: true
     });
-  
+
     if (!privacy_policy_page_fr) {
       const error = new Error("No privacy_policy_page_fr found!")
       return next(error)
     }
 
-    rendered_privacy_policy_page_fr = ejs.render(privacy_policy_page_fr.html_content, { 
+    rendered_privacy_policy_page_fr = ejs.render(privacy_policy_page_fr.html_content, {
       business_data: res.locals.index_page_data.business_data
     });
 
@@ -459,7 +494,7 @@ app.get('/sitemap/sitemap-3', async (req, res, next) => {
   // res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   // res.setHeader('Pragma', 'no-cache');
   // res.setHeader('Expires', '0');
-  
+
   // Define the path to the XML file
   const xmlFilePath = path.join(__dirname, 'public', 'sitemap', 'sitemap.xml');
 
@@ -492,11 +527,11 @@ app.get('/sitemap/sitemap-3', async (req, res, next) => {
   }
 
   all_data_per_page_fr.forEach(all_data_per_page_fr => {
-    
-    if (discarded_object_ids.includes(all_data_per_page_fr.id)) {return;}
+
+    if (discarded_object_ids.includes(all_data_per_page_fr.id)) { return; }
 
     let lastmod = new Date(all_data_per_page_fr.last_modified)
-  
+
     urls.push({
       URL: all_data_per_page_fr.page_url_identify,
       lastmod: lastmod,
@@ -522,11 +557,11 @@ app.get('/sitemap/sitemap-3', async (req, res, next) => {
   }
 
   all_data_per_page_en.forEach(all_data_per_page_en => {
-    
-    if (discarded_object_ids.includes(all_data_per_page_en.id)) {return;}
+
+    if (discarded_object_ids.includes(all_data_per_page_en.id)) { return; }
 
     let lastmod = new Date(all_data_per_page_en.last_modified)
-  
+
     urls.push({
       URL: all_data_per_page_en.page_url_identify,
       lastmod: lastmod,
@@ -723,7 +758,7 @@ app.get('/sitemap/sitemap-3', async (req, res, next) => {
 
 
 
-  
+
   console.log(urls)
   // return res.end()
 
@@ -774,7 +809,7 @@ app.get('/sitemap/sitemap-3', async (req, res, next) => {
 
 
 
-app.get(['/plan-du-site', '/sitemap/en'], middleware4.mid1,  middleware4_en.mid1, middleware9.mid1, middleware9_en.mid1, async (req, res, next) => {
+app.get(['/plan-du-site', '/sitemap/en'], middleware4.mid1, middleware4_en.mid1, middleware9.mid1, middleware9_en.mid1, async (req, res, next) => {
 
 
 

@@ -147,7 +147,14 @@
     content="<%= all_data_per_page.meta_description %>">
   <link rel="canonical" href='<%= req_path %>'>
   
-    
+
+<% } else if (req_path === '/backlink/1') { %>
+
+  <title><%= all_data_per_page.title %></title>
+  <meta name="title" content="<%= all_data_per_page.title %>">
+  <meta name="description"
+    content="<%= all_data_per_page.meta_description %>">
+  <link rel="canonical" href='<%= req_path %>'>
 
 
 <% } else { %>
