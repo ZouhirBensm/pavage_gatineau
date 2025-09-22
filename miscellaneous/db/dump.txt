@@ -995,7 +995,7 @@ CREATE TABLE `plan_du_site_page_fr` (
 
 LOCK TABLES `plan_du_site_page_fr` WRITE;
 /*!40000 ALTER TABLE `plan_du_site_page_fr` DISABLE KEYS */;
-INSERT INTO `plan_du_site_page_fr` VALUES (1,'Plan du Site','Pavage Gatineau Asphalte Gatineau Earnanswers','description','Plan du site','Plan du site HTML','Plan du site XML','/sitemap/en',NULL);
+INSERT INTO `plan_du_site_page_fr` VALUES (1,'Plan du Site','Pavage Gatineau Asphalte Gatineau Earnanswers','description','Plan du site','Plan du site HTML','Plan du site XML','/sitemap/en','Mettre à jour le plan du site');
 /*!40000 ALTER TABLE `plan_du_site_page_fr` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1218,4 +1218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-09-22 11:04:44
+-- Dump completed on 2025-09-22 11:11:42
