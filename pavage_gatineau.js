@@ -55,6 +55,7 @@ const middleware7_en = require('./lifecycle/middleware/mid7_en')
 const middleware8 = require('./lifecycle/middleware/mid8')
 const middleware9 = require('./lifecycle/middleware/mid9')
 const middleware9_en = require('./lifecycle/middleware/mid9_en')
+const backlink_middleware = require('./lifecycle/middleware/backlink_middleware/mid1.js')
 
 
 
@@ -108,8 +109,8 @@ require('./miscellaneous/db/db')
 // Controllers
 const get_catch_controller = require('./lifecycle/controller/get-catch-controller/cont1')
 const data_error_handler_controller = require('./lifecycle/controller/error-controller/cont1');
-const middleware = require('./lifecycle/middleware/mid6_en');
-
+// const middleware = require('./lifecycle/middleware/mid6_en');
+const backlink_controller = require('./lifecycle/controller/backlink-controller/cont1.js');
 
 
 
@@ -170,39 +171,11 @@ app.get(['/', '/en'], middleware1.mid1, middleware1_en.mid1_en, async (req, res)
 
 
 // TODO ! HERE need to reduce the over query of all the elements?
-app.get('/backlink/1', middleware1.mid1, async (req, res) => {
-
-
-  const all_data_per_page = {
-    ...res.locals.index_page_data.all_data_per_page,
-    title: 'List of links for Google crawler 1',
-    description: 'All the links for webpages that contain themselves links to one of the site I control for SEO crawler purposes',
-    page_url_identify: '/backlink/1',
-    under_h1: 'Backlinks',
-    eq_lang_page: '/backlink/1',
-    last_modified: '2025-09-20T10:27:07.077Z',
-    // css_link: undefined,
-    // schema_script: undefined,
-    // title_meta_canonical: undefined,
-    // front_end_script_needed_to_serve_variables: undefined,
-    // brochure_text1: undefined,
-    // brochure_text2: undefined,
-    // rendered_title_meta_canonical: undefined,
-    // rendered_front_end_script_needed_to_serve_variables: undefined,
-  }
-
-
-  res.locals.index_page_data = {
-    ...res.locals.index_page_data,
-    all_data_per_page: all_data_per_page
-  }
-
-
-  // console.log(res.locals.index_page_data)
-  return res.render('backlink1', { ...res.locals.index_page_data });
-});
-
-
+app.get('/backlink/1', 
+  middleware1.mid1, 
+  backlink_middleware.mid1,
+  backlink_controller.cont1
+);
 
 
 

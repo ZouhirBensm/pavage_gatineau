@@ -83,112 +83,58 @@
 
       <div style="max-width: 2000px; justify-self: center;">
         <div class="row" style="justify-content: center;">
-          <%- include('body/main-services.ejs') %>
-        </div>
-      </div>
-
-      <div class="container-fluid">
-        <div class="row" style="justify-content: center;">
 
 
 
+          <div class="col-12 spacing">
 
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63509.1635253364!2d-75.80609170992977!3d45.436933565835496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce028cacba247b%3A0xfe88e0713173d877!2s1700%20Chem.%20Pink%2C%20Gatineau%2C%20QC%20J9J%203N7%2C%20Canada!5e0!3m2!1sfr!2sus!4v1724431222023!5m2!1sfr!2sus" width="600" height="450" style="border:0; width: 100%; height: 450px; border:0; max-width: 1200px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- -- -->
+            <div>
+              <style>
+                h1 {
+                  text-align: center;
+                }
+                div > ul {
+                  display: flex;
+                  flex-wrap: wrap;
+                  list-style: none;
+                  padding: 0;
+                  gap: 10px;
+                  justify-content: center;
+                }
+                div > ul > li {
+                  width: 35ch;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  font-size: 0.9em;
+                }
+              </style>
 
-
-
-          
-
-        </div>
-      </div>
-    </section>
-    <!-- End portfolio section -->
-
-
-
-
-
-    <!-- Review section -->
-    <div id="tmContact" class="parallax-window" data-parallax="scroll" data-image-src="/img/pavage_gatineau_b1.webp"
-    alt="<%= welcome_section.banner_img_alt %>">
-
-      <div class="container-fluid">
-
-        <div class="row">
-          <div class="col-12">
-
-            <div class="tm-contact-items-container">
-
-
-
-
-              <% review_data.forEach(function(review) { %>
-              <div class="tm-contact-item">
-                <!-- Review Text -->
-                <p>
-                  <%= review.review_body %>
-                </p>
-                <!-- Reviewer Name -->
-                <p class="mb-0">
-                  <%= review.name %>
-                </p>
-
-                <!-- Star Rating -->
-                <div class="star-rating">
-                  <div class="stars-<%= Math.floor(review.rating_value) %>">
-                    <% for(let i = 1; i <= 5; i++) { %>
-                      <span class="star <%= i <= Math.floor(review.rating_value) ? 'filled' : (i === Math.ceil(review.rating_value) && review.rating_value % 1 !== 0 ? 'half-filled' : '') %>">★</span>
-                    <% } %>
-                  </div>
-                </div>
-
-                <div class="svg-wrapper"></div>
-                <div class="svg-wrapper2"></div>
+              <div>
+                <h1>List of Backlinks</h1>
+                <ul>
+                  <% urls.forEach(url => { %>
+                    <li><a href="<%= url %>"><%= url %></a></li>
+                  <% }); %>
+                </ul>
               </div>
-              <% }); %>
-
-
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-        <div id="FAQ" class="row">
-          <div class="col-12">
-            <div class="tm-bg-darker-blue-transparent" itemscope itemtype="https://schema.org/FAQPage">
-              <h2>FAQ</h2>
-        
-              <% faq.forEach(function(faq) { %>
-                <details itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                  <summary itemprop="name"><%= faq.id %>. <%= faq.question %></summary>
-                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-                    <span itemprop="text"><%= faq.answer %></span>
-                  </div>
-                </details>
-              <% }); %>
-        
             </div>
+            <!-- -- -->
+
+
           </div>
+
+
+
         </div>
-        
-
-
       </div>
-    </div>
 
 
 
 
 
-
-
-
-
-    <!-- section -->
   </div>
 
 
