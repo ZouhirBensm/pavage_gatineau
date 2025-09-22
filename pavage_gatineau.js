@@ -56,6 +56,7 @@ const middleware8 = require('./lifecycle/middleware/mid8')
 const middleware9 = require('./lifecycle/middleware/mid9')
 const middleware9_en = require('./lifecycle/middleware/mid9_en')
 const backlink_middleware = require('./lifecycle/middleware/backlink_middleware/mid1.js')
+const middleware10 = require('./lifecycle/middleware/mid10')
 
 
 
@@ -170,9 +171,8 @@ app.get(['/', '/en'], middleware1.mid1, middleware1_en.mid1_en, async (req, res)
 
 
 
-// TODO ! HERE need to reduce the over query of all the elements?
 app.get('/backlink/1', 
-  middleware1.mid1, 
+  middleware10.mid1, 
   backlink_middleware.mid1,
   backlink_controller.cont1
 );
