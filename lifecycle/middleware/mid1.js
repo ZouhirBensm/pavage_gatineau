@@ -34,6 +34,8 @@ async function mid1(req, res, next) {
   });
 
 
+  // console.log(blog_elements_fr)
+
 
   if (!blog_elements_fr) {
     const error = new Error("No blog elements found!")
