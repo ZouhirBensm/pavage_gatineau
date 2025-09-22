@@ -171,8 +171,8 @@ app.get(['/', '/en'], middleware1.mid1, middleware1_en.mid1_en, async (req, res)
 
 
 
-app.get('/backlink/1', 
-  middleware10.mid1, 
+app.get('/backlink/1',
+  middleware10.mid1,
   backlink_middleware.mid1,
   backlink_controller.cont1
 );
@@ -728,6 +728,18 @@ app.get('/sitemap/sitemap-3', async (req, res, next) => {
 
   });
 
+
+
+  let last_modified_2 = '2025-09-22T14:56:35.192Z';
+  let last_modified_2_date = new Date(last_modified_2);
+
+
+  urls.push({
+    URL: '/backlink/1',
+    lastmod: last_modified_2_date,
+    changefreq: "monthly",
+    priority: 1,
+  });
 
 
 
