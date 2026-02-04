@@ -148,7 +148,7 @@
   <link rel="canonical" href='<%= req_path %>'>
   
 
-<% } else if (req_path === '/backlink/1') { %>
+<% } else if (/^\/backlink\/\d+$/.test(req_path)) { %>
 
   <title><%= all_data_per_page.title %></title>
   <meta name="title" content="<%= all_data_per_page.title %>">

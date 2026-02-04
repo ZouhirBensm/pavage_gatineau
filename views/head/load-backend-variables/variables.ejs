@@ -168,19 +168,14 @@
 
 
 <% } else if (req_path === '/plan-du-site' || req_path === '/sitemap/en') { %>
-  
   <script>
 
   </script>
 
-
-<% } else if (req_path === '/backlink/1') { %>
-  
+<% } else if (/^\/backlink\/\d+$/.test(req_path)) { %>
   <script>
 
   </script>
-
-
 
 <% } else { %>
   <p>Status is unknown. 1</p>

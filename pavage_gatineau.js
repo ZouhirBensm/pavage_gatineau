@@ -59,6 +59,8 @@ const backlink_middleware = require('./lifecycle/middleware/backlink_middleware/
 const middleware10 = require('./lifecycle/middleware/mid10')
 
 
+const middleware12 = require('./lifecycle/middleware/mid12')
+
 
 app.set('view engine', 'ejs');
 app.set('etag', 'strong');
@@ -171,11 +173,61 @@ app.get(['/', '/en'], middleware1.mid1, middleware1_en.mid1_en, async (req, res)
 
 
 
-app.get('/backlink/1',
+// app.get('/backlink/1',
+//   middleware10.mid1,
+//   backlink_middleware.mid1,
+//   backlink_controller.cont1
+// );
+
+app.get('/backlink/:n',
   middleware10.mid1,
-  backlink_middleware.mid1,
-  backlink_controller.cont1
-);
+  middleware12.mid1,
+  async (req, res, next) => {
+
+    if (res.locals.error) {
+      return next()
+    }
+
+    let all_data_per_page_en = await db.all_data_per_page_en.findOne({
+      where: {
+        page_url_identify: '/about/en',
+      },
+      raw: true
+    });
+
+    if (!all_data_per_page_en) {
+      const error = new Error("No all_data_per_page_en found!")
+      return next(error)
+    }
+
+    const n = req.params.n;
+
+    res.locals.is_english = true
+    // res.locals.index_page_data = {}
+    res.locals.index_page_data.all_data_per_page = all_data_per_page_en
+
+    res.locals.index_page_data.all_data_per_page = {
+      ...res.locals.index_page_data.all_data_per_page,
+      description: 'All the links for webpages that contain themselves links to one of the site I control for SEO crawler purposes',
+      title: `List of links for Google crawler ${n}`,
+      page_url_identify: `/backlink/${n}`,
+      under_h1: 'Backlinks',
+      eq_lang_page: `/backlink/${n}`,
+      last_modified: '2026-02-02T23:01:22.513Z',
+      schema_script: undefined,
+      // front_end_script_needed_to_serve_variables: rendered_front_end_script_needed_to_serve_variables,
+      // css_link: undefined,
+      // title_meta_canonical: undefined,
+      // brochure_text1: undefined,
+      // brochure_text2: undefined,
+      // rendered_title_meta_canonical: undefined,
+      // rendered_front_end_script_needed_to_serve_variables: undefined,
+    }
+
+    console.log(res.locals.index_page_data)
+    return res.render('backlink1', { ...res.locals.index_page_data });
+  })
+
 
 
 

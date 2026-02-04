@@ -26,5 +26,10 @@
 </head>
 <body>
   <h1>URL not set</h1>
+  <% if (locals.error) { %>
+    <p>
+      <%= locals.error %>
+    </p>
+  <% } %>
 </body>
 </html>

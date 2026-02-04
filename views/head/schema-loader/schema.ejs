@@ -25,7 +25,7 @@
 
   <script src="/js/schema/BlogPostingSchema.js"></script>
 
-<% } else if (req_path === '/backlink/1') { %>
+<% } else if (/^\/backlink\/\d+$/.test(req_path)) { %>
 
 
 
