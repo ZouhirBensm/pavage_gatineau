@@ -113,7 +113,7 @@
               </style>
 
               <div>
-                <h1>List of Backlinks</h1>
+                <h1><%= index_page_data.all_data_per_page.title %></h1>
                 <ul>
                   <% urls.forEach(url => { %>
                     <li><a href="<%= url %>"><%= url %></a></li>
@@ -121,7 +121,6 @@
                 </ul>
               </div>
             </div>
-            <!-- -- -->
 
 
           </div>

@@ -509,17 +509,23 @@ app.get('/sitemap/sitemap-3', sitemap_controller.cont1);
 
 app.get(['/plan-du-site', '/sitemap/en'], middleware4.mid1, middleware4_en.mid1, middleware9.mid1, middleware9_en.mid1, async (req, res, next) => {
 
+  let backlink_pages_urls = []
+  const backlinksDir = path.join(__dirname, './backlinks');
 
+  const files = fs.readdirSync(backlinksDir);
 
+  for (const file of files) {
+    const match = file.match(/^backlink(\d+)\.txt$/i);
+    if (!match) continue;
 
-  // console.log("\n\n________________________ \n\nres.locals.index_page_data -> \n\n", res.locals.index_page_data)
+    const number = match[1];
 
+    backlink_pages_urls.push(`/backlink/${number}`);
+  }
 
-
-  // return res.end()
+  res.locals.backlink_pages_urls = backlink_pages_urls
 
   return res.render('plan-du-site', { ...res.locals.index_page_data });
-
 });
 
 

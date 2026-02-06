@@ -116,11 +116,23 @@
               <li><a href="/sitemap/sitemap.xml" target="_blank"><%= plan_du_site_page.h3_2 %></a></li>
             </ul>
 
-            <h3>Backlinks</h3>
+            <!-- <h3>Backlinks</h3>
             <ul>
               <li><a href="/backlink/1" target="_blank">Backlink 1</a></li>
-            </ul>
+            </ul> -->
             
+            <% if (!is_english) { %>
+            <h3>Backlinks</h3>
+        
+            <ul>
+              <% backlink_pages_urls.forEach(function(backlink_page_url) { %>
+                <li><a href="<%= backlink_page_url %>"><%= backlink_page_url %></a></li>
+              <% }); %>
+            </ul>
+          <% } %>
+
+
+
           </div>
         </div>
       </div>
