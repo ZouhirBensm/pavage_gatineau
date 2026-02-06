@@ -4,9 +4,9 @@ const fs = require('fs');
 const createSiteMap = require('../../../miscellaneous/utils/custom-sitemap')
 
 async function cont1(req, res, next) {
-  // res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-  // res.setHeader('Pragma', 'no-cache');
-  // res.setHeader('Expires', '0');
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.setHeader('Pragma', 'no-cache');
+  res.setHeader('Expires', '0');
 
   const PROJECT_ROOT = path.join(__dirname, '../../../');
   const xmlFilePath = path.join(PROJECT_ROOT, 'public', 'sitemap', 'sitemap.xml');
@@ -284,15 +284,15 @@ async function cont1(req, res, next) {
     const number = match[1];
 
     urls.push({
-      url: `/backlink/${number}`,
+      URL: `/backlink/${number}`,
       lastmod: lastmod,
       changefreq: "monthly",
       priority: 0.8
     });
   }
 
-
-  console.log(JSON.stringify(urls, null, 2));  
+  console.log(urls)
+  console.log(JSON.stringify(urls, null, 2));
 
   const xml = createSiteMap(urls, res.locals.protocoled_domain);
 
@@ -303,8 +303,8 @@ async function cont1(req, res, next) {
 
   // return res.render('sitemap');
   // return res.sendFile('sitemap.html', { root: 'public' });
-  return res.redirect(301, '/');
-  // return res.end()
+  // return res.redirect(301, '/');
+  return res.end()
 }
 
 

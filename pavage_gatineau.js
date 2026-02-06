@@ -480,7 +480,7 @@ app.get(['/tiroir1/politique-de-confidentialite', '/drawer1/privacy-policy/en'],
 
 
 
-app.get('/sitemap/sitemap-3', sitemap_controller.cont1);
+app.get('/sitemap/sitemap-4', sitemap_controller.cont1);
 
 
 
