@@ -173,13 +173,6 @@ app.get(['/', '/en'], middleware1.mid1, middleware1_en.mid1_en, async (req, res)
 
 
 
-
-// app.get('/backlink/1',
-//   middleware10.mid1,
-//   backlink_middleware.mid1,
-//   backlink_controller.cont1
-// );
-
 app.get('/backlink/:n',
   middleware10.mid1,
   middleware12.mid1,
@@ -203,7 +196,6 @@ app.get('/backlink/:n',
 
     const n = req.params.n;
 
-    res.locals.is_english = true
     // res.locals.index_page_data = {}
     res.locals.index_page_data.all_data_per_page = all_data_per_page_en
 
