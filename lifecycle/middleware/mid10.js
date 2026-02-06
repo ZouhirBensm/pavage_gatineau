@@ -11,10 +11,6 @@ async function mid1(req, res, next) {
     // attributes: ['slug', 'title'],
   });
 
-
-
-
-
   const business_data_fr = await db.business_data_fr.findOne({
     // attributes: ['slug', 'title'],
     raw: true
@@ -24,9 +20,6 @@ async function mid1(req, res, next) {
     const error = new Error("No business data found!")
     return next(error)
   }
-
-
-
 
   const nav_fr = await db.nav_fr.findOne({
     // attributes: ['slug', 'title'],
@@ -38,7 +31,6 @@ async function mid1(req, res, next) {
     return next(error)
   }
 
-
   const welcome_section_fr = await db.welcome_section_fr.findOne({
     // attributes: ['slug', 'title'],
     raw: true
@@ -48,8 +40,6 @@ async function mid1(req, res, next) {
     const error = new Error("No welcome_section_fr found!")
     return next(error)
   }
-
-
 
   const portfolio_section_fr = await db.portfolio_section_fr.findOne({
     // attributes: ['slug', 'title'],
@@ -61,7 +51,6 @@ async function mid1(req, res, next) {
     return next(error)
   }
 
-
   const index_content_fr = await db.index_content_fr.findAll({
     // attributes: ['slug', 'title'],
     raw: true
@@ -71,8 +60,6 @@ async function mid1(req, res, next) {
     const error = new Error("No index_content_fr found!")
     return next(error)
   }
-
-
 
   const faq_fr = await db.faq_fr.findAll({
     // attributes: ['slug', 'title'],
@@ -84,7 +71,6 @@ async function mid1(req, res, next) {
     return next(error)
   }
 
-
   const footer_fr = await db.footer_fr.findOne({
     // attributes: ['slug', 'title'],
     raw: true
@@ -95,11 +81,6 @@ async function mid1(req, res, next) {
     return next(error)
   }
 
-
-
-
-
-
   // console.log(extra_service_pages_fr)
   // console.log(index_content_fr)
   // console.log(blog_elements_fr)
@@ -109,12 +90,14 @@ async function mid1(req, res, next) {
   // console.log(faq_fr)
   // console.log(footer_fr)
 
-
-
   const n = req.params.n;
 
+  res.locals.index_page_data = {}
+  
+  // res.locals.index_page_data.all_data_per_page = all_data_per_page_fr
+
   res.locals.index_page_data.all_data_per_page = {
-    ...res.locals.index_page_data.all_data_per_page,
+    ...all_data_per_page_fr,
     description: "Tous les liens vers des pages web qui contiennent elles-mêmes des liens vers l'un des sites que je contrôle (à des fins de crawl SEO / suivi par les robots)",
     title: `Liste des liens pour le crawler Google ${n}`,
     page_url_identify: `/backlink/${n}`,
@@ -123,10 +106,8 @@ async function mid1(req, res, next) {
     last_modified: '2026-02-02T23:01:22.513Z',
   }
 
-  console.log(res.locals.index_page_data)
-
   res.locals.index_page_data = {
-    all_data_per_page: all_data_per_page_fr,
+    all_data_per_page: res.locals.index_page_data.all_data_per_page,
     business_data: business_data_fr,
     nav: nav_fr,
     welcome_section: welcome_section_fr,
@@ -136,9 +117,7 @@ async function mid1(req, res, next) {
     footer: footer_fr
   }
 
-
-
-
+  console.log(res.locals.index_page_data)
   // console.log(res.locals.index_page_data)
 
   return next()
