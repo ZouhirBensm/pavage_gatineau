@@ -182,6 +182,19 @@ app.get('/backlink/:n',
       return next()
     }
 
+    res.locals.index_page_data.all_data_per_page = {
+      ...res.locals.index_page_data.all_data_per_page,
+      description: "Tous les liens vers des pages web qui contiennent elles-mêmes des liens vers l'un des sites que je contrôle (à des fins de crawl SEO / suivi par les robots)",
+      title: `Liste des liens pour le crawler Google ${res.locals.n}`,
+      page_url_identify: `/backlink/${res.locals.n}`,
+      under_h1: 'Backlinks',
+      eq_lang_page: `/backlink/${res.locals.n}`,
+      last_modified: '2026-02-02T23:01:22.513Z',
+    }
+
+    console.log(res.locals.index_page_data)
+    // console.log(res.locals.index_page_data)
+
     return res.render('backlink1', { ...res.locals.index_page_data });
   })
 

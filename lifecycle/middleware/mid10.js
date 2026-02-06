@@ -90,21 +90,16 @@ async function mid1(req, res, next) {
   // console.log(faq_fr)
   // console.log(footer_fr)
 
-  const n = req.params.n;
+  res.locals.n = req.params.n;
 
-  res.locals.index_page_data = {}
-  
+  res.locals.index_page_data = {
+    all_data_per_page: all_data_per_page_fr
+  }
+
+
   // res.locals.index_page_data.all_data_per_page = all_data_per_page_fr
 
-  res.locals.index_page_data.all_data_per_page = {
-    ...all_data_per_page_fr,
-    description: "Tous les liens vers des pages web qui contiennent elles-mêmes des liens vers l'un des sites que je contrôle (à des fins de crawl SEO / suivi par les robots)",
-    title: `Liste des liens pour le crawler Google ${n}`,
-    page_url_identify: `/backlink/${n}`,
-    under_h1: 'Backlinks',
-    eq_lang_page: `/backlink/${n}`,
-    last_modified: '2026-02-02T23:01:22.513Z',
-  }
+
 
   res.locals.index_page_data = {
     all_data_per_page: res.locals.index_page_data.all_data_per_page,
@@ -117,8 +112,6 @@ async function mid1(req, res, next) {
     footer: footer_fr
   }
 
-  console.log(res.locals.index_page_data)
-  // console.log(res.locals.index_page_data)
 
   return next()
 }
