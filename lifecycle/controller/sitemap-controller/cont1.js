@@ -4,9 +4,17 @@ const fs = require('fs');
 const createSiteMap = require('../../../miscellaneous/utils/custom-sitemap')
 
 async function cont1(req, res, next) {
+  // Set cache-control headers to prevent caching
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+
   res.setHeader('Pragma', 'no-cache');
+  res.set('Pragma', 'no-cache');
+
   res.setHeader('Expires', '0');
+  res.set('Expires', '0');
+
+  res.set('Surrogate-Control', 'no-store');
 
   const PROJECT_ROOT = path.join(__dirname, '../../../');
   const xmlFilePath = path.join(PROJECT_ROOT, 'public', 'sitemap', 'sitemap.xml');
