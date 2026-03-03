@@ -59,7 +59,18 @@
 
 <% } else if (req_path === '/service/scellant-asphalte-gatineau' || req_path === '/service/asphalt-scellant-gatineau/en') { %>
 
-  <link rel="stylesheet" href="/css/travaux-en-beton-residentiel-et-commercial.css" />
+  <!-- <link rel="stylesheet" href="/css/travaux-en-beton-residentiel-et-commercial.css" /> -->
+  <link rel="stylesheet" href="/css/main-services.css" />
+
+  <style>
+    @media (max-width: 850px) {
+      .responsive-img {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  </style>
 
 
 <% } else if (req_path.startsWith('/service')) { %>
