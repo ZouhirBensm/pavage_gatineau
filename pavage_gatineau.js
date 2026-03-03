@@ -154,6 +154,20 @@ goneUrls.forEach(url => {
 
 
 
+// Redirect mappings for old URLs to new URLs
+const redirect_map = {
+  // '/123/123/test1': '/123/123/test2',
+  '/service/gatineau-asphalt-sealant/en': '/service/asphalt-scellant-gatineau/en',
+};
+
+// Implement 301 redirects for the mapped URLs
+Object.keys(redirect_map).forEach(old_url => {
+  app.get(old_url, (req, res) => {
+    res.status(301).redirect(redirect_map[old_url]);
+  });
+});
+
+
 
 
 
