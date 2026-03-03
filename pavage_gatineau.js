@@ -133,7 +133,9 @@ const goneUrls = [
   "/service/location-de-fardiers",
   "/service/rental-of-flatbeds/en",
   "/service/asphalt-maintenance-coating-gatineau/en",
-  "/service/revetement-maintenance-en-asphalte-gatineau"
+  "/service/revetement-maintenance-en-asphalte-gatineau",
+  '/service/pave-uni-gatineau',
+  '/service/interlocking-paving-stones-pavers-gatineau/en',
 ];
 
 
@@ -274,7 +276,7 @@ app.get(['/service/asphalte-gatineau-outaouais-residentiel-et-commercial', '/ser
 // /img/pose-de-pave-uni-residentiel.webp
 
 
-app.get(['/service/pave-uni-gatineau', '/service/interlocking-paving-stones-pavers-gatineau/en'], middleware4.mid1, middleware4_en.mid1, (req, res) => {
+app.get(['/service/scellant-asphalte-gatineau', '/service/asphalt-scellant-gatineau/en'], middleware4.mid1, middleware4_en.mid1, (req, res) => {
 
   // return res.end()
   return res.render('travaux-en-beton-residentiel-et-commercial', { ...res.locals.index_page_data });
