@@ -75,63 +75,20 @@
 
 
 
-<% } else if (req_path === '/service/pavage-residentiel-et-commercial-a-gatineau' || req_path === '/service/residential-and-commercial-paving-in-gatineau/en') { %>
-
-  <script>
-
-    // var all_data_per_page_fr = < %- JSON.stringify(all_data_per_page_fr) %>;
-    // var business_data_fr = < %- JSON.stringify(business_data_fr) %>;
-    // var nav_fr = < %- JSON.stringify(nav_fr) %>;
-    // var welcome_section_fr = < %- JSON.stringify(welcome_section_fr) %>;
-    // var footer_fr = < %- JSON.stringify(footer_fr) %>;
-
-  </script>
-
-
-
-
-
-
-<% } else if (req_path === '/service/asphalte-gatineau-outaouais-residentiel-et-commercial' || req_path === '/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en') { %>
-
+<% } else if (isMainServicePath) { %>
   <script>
     // var all_data_per_page_fr = < %- JSON.stringify(all_data_per_page_fr) %>;
     // var business_data_fr = < %- JSON.stringify(business_data_fr) %>;
     // var nav_fr = < %- JSON.stringify(nav_fr) %>;
     // var welcome_section_fr = < %- JSON.stringify(welcome_section_fr) %>;
     // var footer_fr = < %- JSON.stringify(footer_fr) %>;
-
   </script>
-
-
-<% } else if (req_path === '/service/scellant-asphalte-gatineau' || req_path === '/service/asphalt-scellant-gatineau/en') { %>
-
-
-
-  <script>
-    // var all_data_per_page_fr = < %- JSON.stringify(all_data_per_page_fr) %>;
-    // var business_data_fr = < %- JSON.stringify(business_data_fr) %>;
-    // var nav_fr = < %- JSON.stringify(nav_fr) %>;
-    // var welcome_section_fr = < %- JSON.stringify(welcome_section_fr) %>;
-    // var footer_fr = < %- JSON.stringify(footer_fr) %>;
-
-
-    // console.log(footer_fr)
-  </script>
-
-
-
-
-
 
 <% } else if (req_path.startsWith('/service')) { %>
 
   <script>
 
   </script>
-
-
-
 
 
 

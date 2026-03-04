@@ -60,6 +60,7 @@ const middleware10 = require('./lifecycle/middleware/mid10')
 
 
 const middleware12 = require('./lifecycle/middleware/mid12')
+const middleware13 = require('./lifecycle/middleware/mid13')
 
 
 app.set('view engine', 'ejs');
@@ -70,7 +71,7 @@ app.use(express.static('public'));
 
 
 
-app.use((req, res, next) => {
+app.use(async (req, res, next) => {
 
   global.is_english = req.path.endsWith('/en');
 
@@ -100,8 +101,17 @@ app.use((req, res, next) => {
   console.log("* now -> ", now)
 
 
+  // There needs to be a isMainServicePath present a with a value for the code to work on all pages
+  res.locals.isMainServicePath = false
+ 
+
   return next()
 });
+
+
+
+
+
 
 // Middlewares
 
@@ -261,7 +271,7 @@ app.get(['/a-propos', '/about/en'], middleware3.mid1, middleware3_en.mid1, (req,
 
 
 
-app.get(['/service/pavage-residentiel-et-commercial-a-gatineau', '/service/residential-and-commercial-paving-in-gatineau/en'], middleware4.mid1, middleware4_en.mid1, (req, res) => {
+app.get(['/service/pavage-residentiel-et-commercial-a-gatineau', '/service/residential-and-commercial-paving-in-gatineau/en'], middleware13.mid1, middleware4.mid1, middleware4_en.mid1, (req, res) => {
 
   // return res.end()
   return res.render('pavage-residentiel-et-commercial', { ...res.locals.index_page_data });
@@ -277,7 +287,7 @@ app.get(['/service/pavage-residentiel-et-commercial-a-gatineau', '/service/resid
 
 
 
-app.get(['/service/asphalte-gatineau-outaouais-residentiel-et-commercial', '/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en'], middleware4.mid1, middleware4_en.mid1, (req, res) => {
+app.get(['/service/asphalte-gatineau-outaouais-residentiel-et-commercial', '/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en'], middleware13.mid1, middleware4.mid1, middleware4_en.mid1, (req, res) => {
 
   // return res.end()
   return res.render('revetement-en-asphalte', { ...res.locals.index_page_data });
@@ -290,7 +300,7 @@ app.get(['/service/asphalte-gatineau-outaouais-residentiel-et-commercial', '/ser
 // /img/pose-de-pave-uni-residentiel.webp
 
 
-app.get(['/service/scellant-asphalte-gatineau', '/service/asphalt-scellant-gatineau/en'], middleware4.mid1, middleware4_en.mid1, (req, res) => {
+app.get(['/service/scellant-asphalte-gatineau', '/service/asphalt-scellant-gatineau/en'], middleware13.mid1, middleware4.mid1, middleware4_en.mid1, (req, res) => {
 
   // return res.end()
   return res.render('travaux-en-beton-residentiel-et-commercial', { ...res.locals.index_page_data });
@@ -303,7 +313,7 @@ app.get(['/service/scellant-asphalte-gatineau', '/service/asphalt-scellant-gatin
 
 
 
-app.get(['/service/:page_de_services_supplementaires_seo', '/service/:page_de_services_supplementaires_seo/en'], middleware4.mid1, middleware4_en.mid1, middleware5.mid1, middleware5_en.mid1, async (req, res, next) => {
+app.get(['/service/:page_de_services_supplementaires_seo', '/service/:page_de_services_supplementaires_seo/en'], middleware13.mid1, middleware4.mid1, middleware4_en.mid1, middleware5.mid1, middleware5_en.mid1, async (req, res, next) => {
 
   return res.render('page_de_services_supplementaires_seo', { ...res.locals.index_page_data });
 

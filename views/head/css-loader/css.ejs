@@ -6,13 +6,15 @@
 <link rel="stylesheet" href="/css/footer-style.css" />
 
 
-
 <% if (req_path === '/' || req_path === '/en' || req_path === '/backlink/1') { %>
 
-  <link rel="stylesheet" href="/css/main-services.css" />
   <link rel="stylesheet" href="/css/portfolio-section.css" />
   <link rel="stylesheet" href="/css/review-section.css" />
   <link rel="stylesheet" href="/css/faq-style.css" />
+
+
+
+  <link rel="stylesheet" href="/css/main-services.css" />
 
   <style>
     @media (max-width: 850px) {
@@ -39,32 +41,9 @@
 
 
 
-
-<!-- TODO needs refactoring -->
-<% } else if (req_path === '/service/pavage-residentiel-et-commercial-a-gatineau' || req_path === '/service/residential-and-commercial-paving-in-gatineau/en') { %>
-
-  <!-- <link rel="stylesheet" href="/css/pavage-residentiel-et-commercial.css" /> -->
+<% } else if (isMainServicePath) { %>
   <link rel="stylesheet" href="/css/main-services.css" />
-
-  <style>
-    @media (max-width: 850px) {
-      .responsive-img {
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-    }
-  </style>
-
-
   
-
-
-<% } else if (req_path === '/service/asphalte-gatineau-outaouais-residentiel-et-commercial' || req_path === '/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en') { %>
-
-  <!-- <link rel="stylesheet" href="/css/revetement-en-asphalte.css" /> -->
-  <link rel="stylesheet" href="/css/main-services.css" />
-
   <style>
     @media (max-width: 850px) {
       .responsive-img {
@@ -74,29 +53,10 @@
       }
     }
   </style>
-
-
-
-<% } else if (req_path === '/service/scellant-asphalte-gatineau' || req_path === '/service/asphalt-scellant-gatineau/en') { %>
-
-  <!-- <link rel="stylesheet" href="/css/travaux-en-beton-residentiel-et-commercial.css" /> -->
-  <link rel="stylesheet" href="/css/main-services.css" />
-
-  <style>
-    @media (max-width: 850px) {
-      .responsive-img {
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-    }
-  </style>
-
 
 <% } else if (req_path.startsWith('/service')) { %>
 
   <link rel="stylesheet" href="/css/page-de-services-supplementaires-seo.css" />
-
 
 
 
@@ -136,4 +96,8 @@
   <!-- <p>Status is unknown.</p> -->
 
 <% } %>
+
+
+
+
 

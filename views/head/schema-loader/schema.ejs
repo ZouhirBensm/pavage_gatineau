@@ -21,6 +21,15 @@
   <script src="/js/schema/AboutWebPageSchema.js"></script>
 
 
+
+<% } else if (isMainServicePath) { %>
+
+
+<% } else if (req_path.startsWith('/service')) { %>
+
+
+
+
 <% } else if (/^\/blog\/[^\/]+\/blog-posting\/[^\/]+$/.test(req_path)) { %>
 
   <script src="/js/schema/BlogPostingSchema.js"></script>

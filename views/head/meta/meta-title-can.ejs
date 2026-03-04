@@ -39,35 +39,14 @@
 
 
 
-
-<% } else if (req_path === '/service/pavage-residentiel-et-commercial-a-gatineau' || req_path === '/service/residential-and-commercial-paving-in-gatineau/en') { %>
-
-  <title><%= all_data_per_page.title %></title>
-  <meta name="title" content="<%= all_data_per_page.title %>">
-  <meta name="description"
-    content="<%= all_data_per_page.description %>">
-  <link rel="canonical" href='<%= req_path %>'>
-
-
-
-<% } else if (req_path === '/service/asphalte-gatineau-outaouais-residentiel-et-commercial' || req_path === '/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en') { %>
+<% } else if (isMainServicePath) { %>
 
   <title><%= all_data_per_page.title %></title>
   <meta name="title" content="<%= all_data_per_page.title %>">
   <meta name="description"
     content="<%= all_data_per_page.description %>">
   <link rel="canonical" href='<%= req_path %>'>
-  
 
-
-<% } else if (req_path === '/service/scellant-asphalte-gatineau' || req_path === '/service/asphalt-scellant-gatineau/en') { %>
-
-  <title><%= all_data_per_page.title %></title>
-  <meta name="title" content="<%= all_data_per_page.title %>">
-  <meta name="description"
-    content="<%= all_data_per_page.description %>">
-  <link rel="canonical" href='<%= req_path %>'>
-  
 <% } else if (req_path.startsWith('/service')) { %>
 
   <title><%= extra_service_page.title %></title>
@@ -76,8 +55,6 @@
     content="<%= extra_service_page.description %>">
   <!-- <link rel="canonical" href='/service/< %= extra_service_page.slug %>'> -->
   <link rel="canonical" href='<%= req_path %>'>
-
-
 
 <% } else if (/^\/blog\/[^\/]+\/blog-posting\/[^\/]+$/.test(req_path)) { %>
 
