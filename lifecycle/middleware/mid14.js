@@ -13,6 +13,7 @@ async function mid1(req, res, next) {
   
   
   // console.log("isMainService???????", isMainService)
+  console.log("res.locals.index_page_data???????", res.locals.index_page_data)
   if (isMainService) {
     return res.render('main-service', { ...res.locals.index_page_data });
   }

@@ -102,7 +102,7 @@ app.use(async (req, res, next) => {
   console.log("* now -> ", now)
 
 
-  // There needs to be a isMainServicePath present a with a value for the code to work on all pages
+  // There needs to be a isMainServicePath present with a value for the code to work on all pages
   res.locals.isMainServicePath = false
  
 
@@ -169,7 +169,12 @@ goneUrls.forEach(url => {
 const redirect_map = {
   // '/123/123/test1': '/123/123/test2',
   '/service/gatineau-asphalt-sealant/en': '/service/asphalt-scellant-gatineau/en',
+  '/service/asphalte-gatineau-outaouais-residentiel-et-commercial': '/service/asphalte-gatineau',
+  '/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en': '/service/asphalt-gatineau/en',
 };
+
+
+
 
 // Implement 301 redirects for the mapped URLs
 Object.keys(redirect_map).forEach(old_url => {
