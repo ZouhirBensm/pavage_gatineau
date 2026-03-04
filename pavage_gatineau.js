@@ -269,7 +269,7 @@ app.get(['/a-propos', '/about/en'], middleware3.mid1, middleware3_en.mid1, (req,
 
 
 
-app.get(['/service/:page_de_services_supplementaires_seo', '/service/:page_de_services_supplementaires_seo/en'], middleware13.mid1, middleware4.mid1, middleware4_en.mid1, middleware5.mid1, middleware5_en.mid1, async (req, res, next) => {
+app.get(['/service/:page_de_services_supplementaires_seo', '/service/:page_de_services_supplementaires_seo/en'], middleware13.mid1, middleware4.mid1, middleware4_en.mid1, middleware5.mid1, middleware5_en.mid1, async (req, res) => {
 
   return res.render('page_de_services_supplementaires_seo', { ...res.locals.index_page_data });
 
