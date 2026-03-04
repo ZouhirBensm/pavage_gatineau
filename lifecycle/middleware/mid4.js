@@ -5,7 +5,7 @@ const ejs = require('ejs');
 async function mid1(req, res, next) {
   // console.log('\n\n is_english -> ', is_english, ' \n\n')
 
-  if(is_english) return next()
+  if (is_english) return next()
 
   console.log("\n\n French mode is on. 1 \n\n")
 
@@ -85,9 +85,9 @@ async function mid1(req, res, next) {
 
     // console.log(typeof main_service_data_fr.web_page_content);
 
-    rendered_web_page_content = ejs.render(main_service_data_fr.web_page_content, { alt_img1: main_service_data_fr.alt_img1, alt_img2: main_service_data_fr.alt_img2, alt_img3: main_service_data_fr.alt_img3});
+    rendered_web_page_content = ejs.render(main_service_data_fr.web_page_content, { alt_img1: main_service_data_fr.alt_img1, alt_img2: main_service_data_fr.alt_img2, alt_img3: main_service_data_fr.alt_img3 });
   }
-  
+
 
 
 
@@ -104,7 +104,15 @@ async function mid1(req, res, next) {
 
 
 
-  // console.log('\n\nres.locals.index_page_data -> ', res.locals.index_page_data)
+  const isMainService = res.locals.mainServicePaths.some(path => {
+    const slugFromPath = path.replace(/^\/service\//, '').replace(/\/en$/, '');
+    return slugFromPath === req.params.page_de_services_supplementaires_seo;
+  });
+
+  if (isMainService) {
+    return res.render('main-service', { ...res.locals.index_page_data });
+  }
+
 
   return next()
 

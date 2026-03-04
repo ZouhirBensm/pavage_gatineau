@@ -4,7 +4,7 @@ const ejs = require('ejs');
 async function mid1(req, res, next) {
   // console.log('\n\n is_english -> ', is_english, ' \n\n')
 
-  if(!is_english) return next()
+  if (!is_english) return next()
 
   console.log("English mode is on. 1\n\n")
 
@@ -62,7 +62,7 @@ async function mid1(req, res, next) {
   }
 
 
-  
+
   let req_path = res.locals.req_path.replace('/service/', '');
   console.log(req_path);
 
@@ -85,7 +85,7 @@ async function mid1(req, res, next) {
   }
 
 
-  
+
 
 
   res.locals.index_page_data = {
@@ -101,6 +101,14 @@ async function mid1(req, res, next) {
 
 
 
+  const isMainService = res.locals.mainServicePaths.some(path => {
+    const slugFromPath = path.replace(/^\/service\//, '').replace(/\/en$/, '');
+    return slugFromPath === req.params.page_de_services_supplementaires_seo;
+  });
+
+  if (isMainService) {
+    return res.render('travaux-en-beton-residentiel-et-commercial', { ...res.locals.index_page_data });
+  }
 
 
 
@@ -121,3 +129,6 @@ const middleware = {
 
 
 module.exports = middleware
+
+
+
