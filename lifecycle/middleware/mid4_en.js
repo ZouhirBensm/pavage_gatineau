@@ -100,19 +100,6 @@ async function mid1(req, res, next) {
   }
 
 
-
-  const isMainService = res.locals.mainServicePaths.some(path => {
-    const slugFromPath = path.replace(/^\/service\//, '').replace(/\/en$/, '');
-    return slugFromPath === req.params.page_de_services_supplementaires_seo;
-  });
-
-  if (isMainService) {
-    return res.render('travaux-en-beton-residentiel-et-commercial', { ...res.locals.index_page_data });
-  }
-
-
-
-
   return next()
 
 
