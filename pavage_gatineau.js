@@ -171,6 +171,8 @@ const redirect_map = {
   '/service/gatineau-asphalt-sealant/en': '/service/asphalt-scellant-gatineau/en',
   '/service/asphalte-gatineau-outaouais-residentiel-et-commercial': '/service/asphalte-gatineau',
   '/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en': '/service/asphalt-gatineau/en',
+  '/service/pavage-residentiel-et-commercial-a-gatineau': '/service/pavage-gatineau',
+  '/service/residential-and-commercial-paving-in-gatineau/en': '/service/paving-gatineau/en',
 };
 
 
