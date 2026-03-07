@@ -3,7 +3,7 @@
 <url>
 <loc>https://localhost:3004/</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/en"/>
-<lastmod>2024-11-10T17:28:24.292Z</lastmod>
+<lastmod>2026-03-03T12:59:28.657Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
@@ -29,23 +29,23 @@
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/pavage-residentiel-et-commercial-a-gatineau</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/residential-and-commercial-paving-in-gatineau/en"/>
-<lastmod>2024-11-10T17:28:24.292Z</lastmod>
+<loc>https://localhost:3004/service/pavage-gatineau</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/paving-gatineau/en"/>
+<lastmod>2026-03-05T16:02:59.793Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/asphalte-gatineau-outaouais-residentiel-et-commercial</loc>
+<loc>https://localhost:3004/service/asphalte-gatineau</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en"/>
-<lastmod>2024-11-10T17:28:24.292Z</lastmod>
+<lastmod>2026-03-04T18:32:17.016Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/pave-uni-gatineau</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/interlocking-paving-stones-pavers-gatineau/en"/>
-<lastmod>2024-11-10T17:28:24.292Z</lastmod>
+<loc>https://localhost:3004/service/scellant-asphalte-gatineau</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/asphalt-scellant-gatineau/en"/>
+<lastmod>2026-03-03T15:42:35.735Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
@@ -59,7 +59,7 @@
 <url>
 <loc>https://localhost:3004/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/"/>
-<lastmod>2024-11-10T17:28:24.292Z</lastmod>
+<lastmod>2026-03-03T12:59:28.657Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
@@ -85,23 +85,23 @@
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/residential-and-commercial-paving-in-gatineau/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/pavage-residentiel-et-commercial-a-gatineau"/>
-<lastmod>2024-11-10T17:28:24.292Z</lastmod>
+<loc>https://localhost:3004/service/paving-gatineau/en</loc>
+<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/pavage-gatineau"/>
+<lastmod>2026-03-05T16:02:59.793Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/asphalt-paving-repair-and-maintenance-in-gatineau-outaouais/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/asphalte-gatineau-outaouais-residentiel-et-commercial"/>
-<lastmod>2024-11-10T17:28:24.292Z</lastmod>
+<loc>https://localhost:3004/service/asphalt-gatineau/en</loc>
+<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/asphalte-gatineau"/>
+<lastmod>2026-03-04T18:32:17.016Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/interlocking-paving-stones-pavers-gatineau/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/pave-uni-gatineau"/>
-<lastmod>2024-11-10T17:28:24.292Z</lastmod>
+<loc>https://localhost:3004/service/asphalt-scellant-gatineau/en</loc>
+<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/scellant-asphalte-gatineau"/>
+<lastmod>2026-03-03T15:42:35.735Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
@@ -113,13 +113,6 @@
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/pavage-autobloquant-a-gatineau</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/interlocking-paving-in-gatineau/en"/>
-<lastmod>2025-10-22T16:20:09.282Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
 <loc>https://localhost:3004/service/reparation-de-fissures</loc>
 <xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/crack-repair/en"/>
 <lastmod>2024-10-06T16:20:09.282Z</lastmod>
@@ -127,44 +120,9 @@
 <priority>1</priority>
 </url>
 <url>
-<loc>https://localhost:3004/service/scellant-sous-pression</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/pressure-sealant/en"/>
-<lastmod>2024-10-06T16:20:09.282Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/scellant-asphalte-gatineau</loc>
-<xhtml:link rel="alternate" hreflang="en" href="https://localhost:3004/service/gatineau-asphalt-sealant/en"/>
-<lastmod>2025-06-12T16:46:37.798Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/interlocking-paving-in-gatineau/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/pavage-autobloquant-a-gatineau"/>
-<lastmod>2025-07-30T16:20:09.282Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
 <loc>https://localhost:3004/service/crack-repair/en</loc>
 <xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/reparation-de-fissures"/>
 <lastmod>2024-10-06T16:20:09.282Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/pressure-sealant/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/scellant-sous-pression"/>
-<lastmod>2024-10-06T16:20:09.282Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://localhost:3004/service/gatineau-asphalt-sealant/en</loc>
-<xhtml:link rel="alternate" hreflang="fr" href="https://localhost:3004/service/scellant-asphalte-gatineau"/>
-<lastmod>2025-06-12T16:46:37.798Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
@@ -236,31 +194,31 @@
 </url>
 <url>
 <loc>https://localhost:3004/backlink/1</loc>
-<lastmod>2026-02-06T17:29:37.655Z</lastmod>
+<lastmod>2026-02-13T18:27:54.977Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://localhost:3004/backlink/2</loc>
-<lastmod>2026-02-06T17:29:37.655Z</lastmod>
+<lastmod>2026-02-13T18:27:54.977Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://localhost:3004/backlink/3</loc>
-<lastmod>2026-02-06T17:29:37.655Z</lastmod>
+<lastmod>2026-02-13T18:27:54.977Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://localhost:3004/backlink/4</loc>
-<lastmod>2026-02-06T17:29:37.655Z</lastmod>
+<lastmod>2026-02-13T18:27:54.977Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://localhost:3004/backlink/5</loc>
-<lastmod>2026-02-06T17:29:37.655Z</lastmod>
+<lastmod>2026-02-13T18:27:54.977Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>

@@ -145,10 +145,13 @@ const goneUrls = [
   "/service/rental-of-flatbeds/en",
   "/service/asphalt-maintenance-coating-gatineau/en",
   "/service/revetement-maintenance-en-asphalte-gatineau",
-  '/service/pave-uni-gatineau',
-  '/service/interlocking-paving-stones-pavers-gatineau/en',
+  "/service/pave-uni-gatineau",
+  "/service/interlocking-paving-stones-pavers-gatineau/en",
+  "/service/pavage-autobloquant-a-gatineau",
+  "/service/interlocking-paving-in-gatineau/en",
+  "/service/scellant-sous-pression",
+  "/service/pressure-sealant/en",
 ];
-
 
 
 
