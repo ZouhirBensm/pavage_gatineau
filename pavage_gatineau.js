@@ -327,7 +327,7 @@ app.get(['/blog/:category', '/blog/:category/en'], middleware4.mid1, middleware4
 app.get('/blog/:category/blog-posting/:title', middleware0.mid1, middleware4.mid1, middleware4_en.mid1, middleware8.mid1, async (req, res, next) => {
 
 
-  // console.log("\n\n______________________\n\n (*)->: \n", res.locals.index_page_data)
+  console.log("\n\n______________________\n\n (*)->: \n", res.locals.index_page_data)
 
   return res.render('blog-posting', { ...res.locals.index_page_data });
 
