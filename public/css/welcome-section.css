@@ -69,6 +69,11 @@ section#tmWelcome .animated-text.blue {
   animation: bookacall_red 2.5s infinite;
 }
 
+section#tmWelcome div.tm-brand-container.text-center a {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 /* section#tmWelcome .animated-text.black {
   animation: bookacall_black 2.5s infinite;
 } */

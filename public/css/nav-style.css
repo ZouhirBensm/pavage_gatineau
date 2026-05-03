@@ -61,6 +61,11 @@ nav#top>a:link {
 }
 
 
+nav#top a:last-of-type {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 nav#top>a:visited {
   color: white;
 }
