@@ -18,7 +18,50 @@ async function cont1(req, res, next) {
 
   const PROJECT_ROOT = path.join(__dirname, '../../../');
   const xmlFilePath = path.join(PROJECT_ROOT, 'public', 'sitemap', 'sitemap.xml');
-  const backlinksDir = path.join(__dirname, '../../../backlinks');
+
+
+  let urls = []
+
+
+  const backlinksBasePath = process.env['PATH_TO_BACKLINKS'];
+  // const backlinksBasePath = false;
+
+  console.log("\n\nprocess.env['PATH_TO_BACKLINKS']\n\n", process.env['PATH_TO_BACKLINKS'], "\n\n")
+
+  if (!backlinksBasePath) {
+    const errormessage = "Backlinks path configuration missing. PATH_TO_BACKLINKS environment variable is not set"
+    let error = new Error(errormessage)
+    return next(error);
+
+
+    // res.locals.error = error
+    // return next();
+
+  } else {
+    const backlink_pages_edited_date = '2026-02-13T18:27:54.977Z'
+    const lastmod = new Date(backlink_pages_edited_date);
+
+    try {
+      const files = fs.readdirSync(backlinksBasePath);
+
+      for (const file of files) {
+        const match = file.match(/^backlink(\d+)\.txt$/i);
+        if (!match) continue;
+
+        const number = match[1];
+
+        urls.push({
+          URL: `/backlink/${number}`,
+          lastmod: lastmod,
+          changefreq: "monthly",
+          priority: 0.8
+        });
+      }
+    } catch (error) {
+      console.error('Error reading backlinks directory:', error);
+      // Continue without backlinks if directory doesn't exist
+    }
+  }
 
   // const xmlFilePath = path.join(__dirname, 'public', 'sitemap', 'sitemap.xml');
 
@@ -33,9 +76,6 @@ async function cont1(req, res, next) {
 
   let last_modified_1 = '2024-08-14T00:34:21.928Z';
   let last_modified_1_date = new Date(last_modified_1);
-
-
-  let urls = []
 
 
 
@@ -280,27 +320,8 @@ async function cont1(req, res, next) {
   // return res.end()
 
 
-  const backlink_pages_edited_date = '2026-02-13T18:27:54.977Z'
-  const lastmod = new Date(backlink_pages_edited_date);
-
-  const files = fs.readdirSync(backlinksDir);
-
-  for (const file of files) {
-    const match = file.match(/^backlink(\d+)\.txt$/i);
-    if (!match) continue;
-
-    const number = match[1];
-
-    urls.push({
-      URL: `/backlink/${number}`,
-      lastmod: lastmod,
-      changefreq: "monthly",
-      priority: 0.8
-    });
-  }
-
-  console.log(urls)
-  console.log(JSON.stringify(urls, null, 2));
+  // console.log(urls)
+  // console.log(JSON.stringify(urls, null, 2));
 
   const xml = createSiteMap(urls, res.locals.protocoled_domain);
 

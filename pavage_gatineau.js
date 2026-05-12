@@ -55,7 +55,6 @@ const middleware7_en = require('./lifecycle/middleware/mid7_en')
 const middleware8 = require('./lifecycle/middleware/mid8')
 const middleware9 = require('./lifecycle/middleware/mid9')
 const middleware9_en = require('./lifecycle/middleware/mid9_en')
-const backlink_middleware = require('./lifecycle/middleware/backlink_middleware/mid1.js')
 const middleware10 = require('./lifecycle/middleware/mid10')
 
 
@@ -498,32 +497,44 @@ app.get('/sitemap/sitemap-4', sitemap_controller.cont1);
 
 
 
+
 app.get(['/plan-du-site', '/sitemap/en'], middleware4.mid1, middleware4_en.mid1, middleware9.mid1, middleware9_en.mid1, async (req, res, next) => {
 
-  let backlink_pages_urls = []
-  const backlinksDir = path.join(__dirname, './backlinks');
+    let backlink_pages_urls = []
 
-  const files = fs.readdirSync(backlinksDir);
+    // Get the base path from environment variable
+    const backlinksBasePath = process.env['PATH_TO_BACKLINKS'];
+    // const backlinksBasePath = false
 
-  for (const file of files) {
-    const match = file.match(/^backlink(\d+)\.txt$/i);
-    if (!match) continue;
+    if (!backlinksBasePath) {
+      const errormessage = "Backlinks path configuration missing. PATH_TO_BACKLINKS environment variable is not set"
+      let error = new Error(errormessage)
+      error.message = errormessage
+      res.locals.error = error
+      return next();
+    }
 
-    const number = match[1];
+    try {
+      // Read files from the configured backlinks directory
+      const files = fs.readdirSync(backlinksBasePath);
 
-    backlink_pages_urls.push(`/backlink/${number}`);
-  }
+      for (const file of files) {
+        const match = file.match(/^backlink(\d+)\.txt$/i);
+        if (!match) continue;
 
-  res.locals.backlink_pages_urls = backlink_pages_urls
+        const number = match[1];
+        backlink_pages_urls.push(`/backlink/${number}`);
+      }
 
-  return res.render('plan-du-site', { ...res.locals.index_page_data });
-});
+      res.locals.backlink_pages_urls = backlink_pages_urls;
+    } catch (error) {
+      console.error('Error reading backlinks directory:', error);
+      // Continue with empty backlinks list if directory doesn't exist
+      res.locals.backlink_pages_urls = [];
+    }
 
-
-
-
-
-
+    return res.render('plan-du-site', { ...res.locals.index_page_data });
+  });
 
 
 
