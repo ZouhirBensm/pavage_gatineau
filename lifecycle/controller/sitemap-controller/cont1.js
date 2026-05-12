@@ -4,6 +4,11 @@ const fs = require('fs');
 const createSiteMap = require('../../../miscellaneous/utils/custom-sitemap')
 
 async function cont1(req, res, next) {
+
+  const now = new Date();
+  console.log('now -> ', now);
+
+
   // Set cache-control headers to prevent caching
   res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
   res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
@@ -19,9 +24,13 @@ async function cont1(req, res, next) {
   const PROJECT_ROOT = path.join(__dirname, '../../../');
   const xmlFilePath = path.join(PROJECT_ROOT, 'public', 'sitemap', 'sitemap.xml');
 
+  // Delete the existing XML file if it exists
+  if (fs.existsSync(xmlFilePath)) {
+    fs.unlinkSync(xmlFilePath);
+    console.log('Deleted existing sitemap.xml file');
+  }
 
   let urls = []
-
 
   const backlinksBasePath = process.env['PATH_TO_BACKLINKS'];
   // const backlinksBasePath = false;
@@ -65,17 +74,6 @@ async function cont1(req, res, next) {
 
   // const xmlFilePath = path.join(__dirname, 'public', 'sitemap', 'sitemap.xml');
 
-  // Delete the existing XML file if it exists
-  if (fs.existsSync(xmlFilePath)) {
-    fs.unlinkSync(xmlFilePath);
-    console.log('Deleted existing sitemap.xml file');
-  }
-
-  const now = new Date();
-  console.log('now -> ', now);
-
-  let last_modified_1 = '2024-08-14T00:34:21.928Z';
-  let last_modified_1_date = new Date(last_modified_1);
 
 
 
@@ -316,7 +314,7 @@ async function cont1(req, res, next) {
 
 
 
-  
+
   // return res.end()
 
 
